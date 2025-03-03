@@ -8,34 +8,63 @@
     
 
     <style>
-        
-.program-content {
-    width: auto;
+.feedback {
+    margin-top: 20px;
 }
-table {
+
+.feedback textarea {
     width: 100%;
-    border-collapse:separate;
-    border-spacing: 0;
-    text-align: center;
-    border-radius: 10px;
-    overflow: hidden;
+    height: 100px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.rating-emojis {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+.rating span {
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.rating span:hover {
+    transform: scale(1.2);
+}
+.reviews-container{
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    width: 100%;
 }
 
-th {
-    background-color: #1e2a38;
-    color: white;
-    padding: 10px;
+.ratings{
+    width: 30%;
 }
+.right-section{
+    left: 70%;
+}
+.reviews {
+            margin-top: 20px;
+        }
+        .review-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: #fff;
+        }
+        .review-author {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .review-date {
+            color: gray;
+            font-size: 12px;
+        }
 
-td {
-    background-color: #f1f1f1;
-    padding: 10px;
-}
-.description{
-    font-size: 12px;
-    padding: 4px;
-    text-align: center;
-}
     </style>
 </head>
 <body>
@@ -302,7 +331,7 @@ td {
                                 <td>2 weeks</td>
                                 <td>£435</td>
                                 <td>£31/day</td>
-                            </tr>
+                            </tr> 
                         </tbody>
                     </table>
                 </div>
@@ -405,19 +434,39 @@ td {
                 </div>
             </div>
         </div>
+
+        <!--Ratings -->
+<div>
+    <h4 style="text-align: center;">Recent Reviews</h4>
+</div>
+<div class="reviews-container">
+    <div class="ratings"><!--Left side ratings -->
+        <p style="font-size: 60px; color: rgb(14, 151, 14);">9.2/10</p>
+        <p>139 Reviews</p>
+        <p style="font-size: 12px; margin-top: 10px;">Reviews are verified unless labelled otherwise</p>
+    </div>
+    <div class="right-section">
         <div class="reviews">
-            <h3>Reviews</h3>
-            <p>9.4/10 Exceptional (100 reviews)</p>
             <div class="review-card">
-                <h4>Excellent Experience</h4>
-                <p>Volunteering here was a life-changing experience! <a href="#">See More</a></p>
-                <p><strong>John D.</strong> - Feb 2025</p>
+                <strong>10/10 Excellent</strong>
+                <p style="margin-top:12px ;">Wir hatten einen tollen 4-tägigen Aufenthalt mit zwei Erwachsenen und drei Kindern...</p>
+                <div class="review-author">Daniela G.</div>
+                <div class="review-date">Aug 12, 2019</div>
+            </div>
+            <div class="review-card">
+                <strong>10/10 Excellent</strong>
+                <p style="margin-top: 12px;";">We booked for 10 days and found Enrico to be very accommodating...</p>
+                <div class="review-author">Dr Jean M B.</div>
+                <div class="review-date">Aug 16, 2018</div>
             </div>
         </div>
+    </div>
+</div>
+
         <div class="feedback">
             <h3>Send us your review</h3>
             <textarea placeholder="Write your review here..."></textarea>
-            <div class="rating">
+            <div class="rating-emojis">
                 <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
             </div>
             <div class="buttons">
