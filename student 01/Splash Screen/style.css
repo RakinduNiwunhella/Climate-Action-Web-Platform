@@ -1,0 +1,112 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+        @font-face {
+            font-family:blackjack;
+            src: url(fonts/blackjack.otf);
+        }
+        @font-face {
+            font-family:opperplate ;
+            src: url(fonts/Copperplate-Gothic-Std-29-BC.ttf);
+        }
+        h1, h2, p {
+            margin: 0;
+            }
+        .container{
+            display: flex;
+            width: 100%;
+            position: relative;
+        }
+        .leftblock{
+            width: 30%;
+            height: 100vh;
+            background-image: url(images/stone-texture.jpg);
+            background-size:auto;
+        }
+        .climakeActionText{
+            position: relative;
+            text-align: center;
+            font-size: clamp(35px, 5vh, 65px); /* Min: 10px, Scales with height, Max: 40px */
+            font-size: min(5vh, 5vw); /* Shrinks as height or width decreases */
+
+            top: 40%;
+            left: 2%;
+            font-family: "copperplate";
+            font-weight: 500;
+            font-style: normal;
+            color: darkblue;
+            
+        }
+        .getStartedButton{
+            position: absolute;
+            top: 60%;
+            left: 10%;
+            background-color: rgb(231, 231, 5);
+            color: black;
+            padding: 10px 20px;
+            font-size: 20px;
+            font-family: "copperplate";
+            cursor: pointer;
+            border-radius: 20px;
+
+        }
+        .getStartedButton:hover{
+            opacity: 0.7;
+    
+        }
+        .getStartedButton:active{
+            opacity: 0.4;
+        }
+
+        .largerText{
+            font-size: 65px;
+            font-family: "blackjack";
+        }
+        .rightBlock{
+            width: 70%;
+            height: 100vh;
+            background-image: url(images/blue-texture.png);
+            background-size: cover;
+            object-position: top;
+            position: relative;
+
+        }
+        .imagecontainer img{
+            width: 100%;
+            height: 100%;
+            object-fit:cover;
+        }
+
+        
+        .imagecontainer{
+            position: absolute;
+            width: 90%; /* Image size in percentage */
+            height: 70%; /* Adjust as needed */
+            top: 50%; /* Adjust vertical position */
+            left: 50%; /* Adjust horizontal position */
+            transform: translate(-50%, -50%); /* Center the image */
+            border-width: 4px;
+            border-style: solid;
+            border-color: black;
+            border-radius: 10px;
+        }
+        .members{
+            position: absolute;
+            bottom: 0;
+            left: 2%;
+            font-size: 20px;
+            font-family: "copperplate";
+            font-weight: 500;
+            font-style: normal;
+            color: black;
+            
+        }
+        
+

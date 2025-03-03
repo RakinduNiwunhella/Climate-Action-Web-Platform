@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>SplashScreenFinal</title>
+    <style>
+        @font-face {
+            font-family:blackjack;
+            src: url(fonts/blackjack.otf);
+        }
+        @font-face {
+            font-family:opperplate ;
+            src: url(fonts/Copperplate-Gothic-Std-29-BC.ttf);
+        }
+        .container{
+            display: flex;
+            width: 100%;
+        }
+        .background-box{
+            width: 100% ;
+            height:100vh; 
+            top: 0;
+            left: 0;
+            background-color: rgb(153, 149, 149);
+            vertical-align: top;
+            
+
+        }
+
+        .rotatingImages{
+            width: 70%;
+            height: 100vh;
+            object-fit: cover;
+            object-position: bottom;
+            object-position: right;
+            border-width: 2px;
+            border-style: solid;
+            border-color: black;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .climakeActionText{
+            position: absolute;
+            top: 40%;
+            left: 2%;
+            font-size: 50px;
+            font-family: "copperplate";
+            font-weight: 500;
+            font-style: normal;
+            color: darkblue;
+
+
+        }
+        .largerText{
+            font-size: 80px;
+            font-family: "blackjack";
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="background-box">
+        <div class="climakeActionText" >
+            <span class="largerText" >C</span>limtatee &nbsp&nbsp&nbsp  <span class="largerText">A</span>cion
+        </div>
+
+
+    
+        
+    </div>
+    <div> 
+
+        <img class="rotatingImages" src="images/background001.jpg" alt="jungle">
+
+    </div>
+
+</div>
+
+
+</body >
+</html>

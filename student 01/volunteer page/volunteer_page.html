@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Programs</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .durations_volunteer{
+            display: flex;
+            align-items: center;
+            gap: 5px; /* Space between flag and text */
+            position: relative; /* For absolute positioning of the heart button */
+        }
+        .icon{
+            width: 25px;  /* Really small size */
+            height: 25px;
+            padding: 2px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .iconText {
+            font-size: 14px; /* Slightly smaller text for balance */
+            color: #333;
+            margin: 0;
+        }
+
+        .cards{
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+            gap: 5px;
+        }
+        .card{
+            text-align: center;
+            width: 30%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dropdown">
+            <label for="sort">Sort by:</label>
+            <select id="sort">
+                <option>Most Popular</option>
+                <option>Lowest Price</option>
+                <option>Highest Rated</option>
+            </select>
+        </div>
+        <h2>301 Volunteer Programs Found</h2>
+        <p>Matching With 1 Filter <br> Showing 1 to 4 of 301 Results</p>
+ 
+        <div class="programs">
+<!--Program Card div 01 -->
+            <div class="program-card">
+                <!-- Country flag and name -->
+                <div class="countryCircle">
+                    <div class="circle-image">
+                        <img src="images/indonesia-flag-round-icon-128.png" alt="Indonesia Flag">
+                    </div>
+                    <p class="countryText">Indonesia</p>
+                    <!-- Like Button -->
+                     <button class="heart-btn" onclick="toggleLike(this)"></button>
+                     
+                </div>
+                <h4 style="padding: 5px;">Mangrove Reforestation</h4>
+                <!-- Image for program -->
+                 <div>
+                <img src="images/volunteers-team-dig-holes-plant-trees-woodland-ecosystem.jpg" 
+                alt="Program 1">
+                 </div>
+                 <!-- Program cards -->
+                 <div class="cards">
+                    <div class="card"> 
+                        <p>text</p>
+                    </div>
+                    <div class="card">
+                        <p>text</p>    
+                    </div>
+                    <div class="card">
+                        <p>text</p>
+                    </div>
+                    
+                 </div>
+                 <!-- duration time and volunteer ages -->
+                  <div >
+                    <div class="durations_volunteer">
+                        <div class="icon">
+                            <img src="images/icons/clock.png" alt="Green colour clock">
+                        </div>
+                        <div class="iconText">
+                            <p>Durations from 1 - 16 weeks</p>
+                        </div>
+                    </div>
+                    <div class="durations_volunteer">
+                        <div class="icon">
+                            <img src="images/icons/user-icon.png" alt="Green colour clock">
+                        </div>
+                        <div class="iconText">
+                            <p>Volunteers aged 16+ and families</p>
+                        </div>
+                    </div>
+                  </div>
+                <!-- Program content -->
+                <div class="program-content">
+                    <p>Duration: 2 weeks</p>
+                    <p>Fee: £731</p>
+                </div>
+                <!-- Program buttons -->
+                <div class="buttons">
+                    <div class="button">View Project</div>
+                    <div class="button">Apply</div>
+                </div>
+            </div>
+<!--Program Card div 02 -->
+            <div class="program-card">
+                <!-- Country flag and name -->
+                <div class="countryCircle">
+                    <div class="circle-image">
+                        <img src="images/indonesia-flag-round-icon-128.png" alt="Indonesia Flag">
+                    </div>
+                    <p class="countryText">Sri Lanka</p>
+                    <!-- Like Button -->
+                     <button class="heart-btn" onclick="toggleLike(this)"></button>
+                </div>
+                <!-- Image for program -->
+                <img src="images/baby-turtles-moving-towards-ocean.jpg" 
+                alt="Program 1">
+                <!-- Program content -->
+                <div class="program-content">
+                    <h3>Sea Turtle Conservation</h3>
+                    <p>Duration: 2 weeks</p>
+                    <p>Fee: £731</p>
+                </div>
+                <!-- Program buttons -->
+                <div class="buttons">
+                    <div class="button">View Project</div>
+                    <div class="button">Apply</div>
+                </div>
+            </div>
+<!--Program Card div 03 -->
+            <div class="program-card">
+                <!-- Country flag and name -->
+                <div class="countryCircle">
+                    <div class="circle-image">
+                        <img src="images/indonesia-flag-round-icon-128.png" alt="Indonesia Flag">
+                    </div>
+                    <p class="countryText">Thailand</p>
+                    <!-- Like Button -->
+                     <button class="heart-btn" onclick="toggleLike(this)"></button>
+                </div>
+                <!-- Image for program -->
+                <img src="images/volunteers-team-dig-holes-plant-trees-woodland-ecosystem.jpg" 
+                alt="Program 1">
+                <!-- Program content -->
+                <div class="program-content">
+                    <h3>Plastic-Free Coastal Cleanup</h3>
+                    <p>Duration: 2 weeks</p>
+                    <p>Fee: £731</p>
+                </div>
+                <!-- Program buttons -->
+                <div class="buttons">
+                    <div class="button">View Project</div>
+                    <div class="button">Apply</div>
+                </div>
+            </div>
+<!--Program Card div 04 -->
+            <div class="program-card">
+                <!-- Country flag and name -->
+                <div class="countryCircle">
+                    <div class="circle-image">
+                        <img src="images/indonesia-flag-round-icon-128.png" alt="Indonesia Flag">
+                    </div>
+                    <p class="countryText">South Africa</p>
+                    <!-- Like Button -->
+                     <button class="heart-btn" onclick="toggleLike(this)"></button>
+                </div>
+                <!-- Image for program -->
+                <img src="images/volunteers-team-dig-holes-plant-trees-woodland-ecosystem.jpg" 
+                alt="Program 1">
+                <!-- Program content -->
+                <div class="program-content">
+                    <h3>Wildlife Rescue & Rehabilitation</h3>
+                    <p>Duration: 2 weeks</p>
+                    <p>Fee: £731</p>
+                </div>
+                <!-- Program buttons -->
+                <div class="buttons">
+                    <div class="button">View Project</div>
+                    <div class="button">Apply</div>
+                </div>
+            </div>
+        </div>
+        <div class="reviews">
+            <h3>Reviews</h3>
+            <p>9.4/10 Exceptional (100 reviews)</p>
+            <div class="review-card">
+                <h4>Excellent Experience</h4>
+                <p>Volunteering here was a life-changing experience! <a href="#">See More</a></p>
+                <p><strong>John D.</strong> - Feb 2025</p>
+            </div>
+        </div>
+        <div class="feedback">
+            <h3>Send us your review</h3>
+            <textarea placeholder="Write your review here..."></textarea>
+            <div class="rating">
+                <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+            </div>
+            <div class="buttons">
+                <div class="button">Submit Feedback</div>
+                <div class="button" style="background: grey;">Cancel</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleLike(button) {
+            button.classList.toggle('liked');
+        }
+    </script>
+</body>
+</html>

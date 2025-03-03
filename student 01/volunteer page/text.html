@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Programs</title>
+    <style>
+        .program-card {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .countryCircle {
+            display: flex;
+            align-items: center;
+            gap: 5px; /* Space between flag and text */
+            padding: 10px;
+            position: relative; /* For absolute positioning of the heart button */
+        }
+
+        .circle-image {
+            width: 15px;  /* Really small size */
+            height: 15px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .countryText {
+            font-size: 14px; /* Slightly smaller text for balance */
+            color: #333;
+            margin: 0;
+        }
+
+        /* Heart button styles */
+        .heart-btn {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            outline: none;
+            transition: color 0.3s ease;
+        }
+
+        .heart-btn::before {
+            content: "♥";
+            font-size: 20px;
+            color: #ddd; /* Default heart color */
+            transition: color 0.3s ease;
+        }
+
+        .heart-btn.liked::before {
+            color: red; /* Color when liked */
+        }
+
+        .program-card:hover {
+            transform: scale(1.05);
+        }
+
+        .program-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .program-content {
+            padding: 15px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        .button {
+            background: #28a745;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            flex: 1;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="program-card">
+        <!-- Country flag and name -->
+        <div class="countryCircle">
+            <div class="circle-image">
+                <img src="images/indonesia-flag-round-icon-128.png" alt="Indonesia Flag">
+            </div>
+            <p class="countryText">Indonesia</p>
+            <!-- Like Button -->
+            <button class="heart-btn" onclick="toggleLike()"></button> 
+        </div>
+        <!-- Image for program -->
+        <img src="images/volunteers-team-dig-holes-plant-trees-woodland-ecosystem.jpg" 
+        alt="Program 1">
+        <!-- Program content -->
+        <div class="program-content">
+            <h3>Mangrove Reforestation</h3>
+            <p>Duration: 2 weeks</p>
+            <p>Fee: £731</p>
+        </div>
+        <!-- Program buttons -->
+        <div class="buttons">
+            <div class="button">View Project</div>
+            <div class="button">Apply</div>
+        </div>
+    </div>
+
+    <script>
+        function toggleLike() {
+            const heartButton = document.querySelector('.heart-btn');
+            heartButton.classList.toggle('liked');
+        }
+    </script>
+</body>
+</html>
