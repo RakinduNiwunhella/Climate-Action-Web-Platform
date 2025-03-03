@@ -21,6 +21,14 @@ body {
     position: absolute;
     top: 20px;
     right: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
 }
 select {
     padding: 8px;
@@ -113,9 +121,6 @@ select {
     object-fit: cover;
 }
 
-.program-content {
-    padding: 15px;
-}
 
 .buttons {
     display: flex;
@@ -167,4 +172,64 @@ select {
 }
 .rating span:hover {
     transform: scale(1.2);
+}
+.durations_volunteer{
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between flag and text */
+    position: relative; /* For absolute positioning of the heart button */
+}
+.icon{
+    width: 25px;  /* Really small size */
+    height: 25px;
+    padding: 2px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.iconText {
+    font-size: 14px; /* Slightly smaller text for balance */
+    color: #333;
+    margin: 0;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    gap: 5px;
+    margin: 5px;
+}
+.card{
+    text-align: center;
+    width: 30%;
+    padding: 3px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9f9;
+    font-size: 12px;
+    
+}
+.card-images{
+    width: 60px;  
+    height: 60px;
+    padding: 2px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+.card-images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

@@ -8,47 +8,34 @@
     
 
     <style>
-        .durations_volunteer{
-            display: flex;
-            align-items: center;
-            gap: 5px; /* Space between flag and text */
-            position: relative; /* For absolute positioning of the heart button */
-        }
-        .icon{
-            width: 25px;  /* Really small size */
-            height: 25px;
-            padding: 2px;
-            border-radius: 50%;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .iconText {
-            font-size: 14px; /* Slightly smaller text for balance */
-            color: #333;
-            margin: 0;
-        }
+        
+.program-content {
+    width: auto;
+}
+table {
+    width: 100%;
+    border-collapse:separate;
+    border-spacing: 0;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
 
-        .cards{
-            display: flex;
-            justify-content: space-between;
-            margin: 15px 0;
-            gap: 5px;
-        }
-        .card{
-            text-align: center;
-            width: 30%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background: #f9f9f9;
-        }
+th {
+    background-color: #1e2a38;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+.description{
+    font-size: 12px;
+    padding: 4px;
+    text-align: center;
+}
     </style>
 </head>
 <body>
@@ -86,13 +73,22 @@
                  <!-- Program cards -->
                  <div class="cards">
                     <div class="card"> 
-                        <p>text</p>
+                        <div class="card-images">
+                            <img src="images/cards/—Pngtree—tree silhouette vector for cutting_5107644.png" alt="black and white tree">
+                        </div>
+                        <p>Reforestation</p>
                     </div>
                     <div class="card">
-                        <p>text</p>    
+                        <div class="card-images">
+                            <img src="images/cards/—Pngtree—clock vector cartoon_3668551.png" alt="black and white clock">
+                        </div>
+                        <p>3 - 5 hours volunteering per day</p>    
                     </div>
                     <div class="card">
-                        <p>text</p>
+                        <div class="card-images">
+                            <img src="images/cards/—Pngtree—coin money icon_5278199.png" alt="black and white money">
+                        </div>
+                        <p>Program fees from $150</p>
                     </div>
                     
                  </div>
@@ -117,8 +113,26 @@
                   </div>
                 <!-- Program content -->
                 <div class="program-content">
-                    <p>Duration: 2 weeks</p>
-                    <p>Fee: £731</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Duration</th>
+                                <th>Program Fee</th>
+                                <th>Cost/Day</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2 weeks</td>
+                                <td>£435</td>
+                                <td>£31/day</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <p class="description">Mangrove reforestation restores coastal forests, protecting shorelines, supporting wildlife,
+                         and absorbing carbon to fight climate change.</p>
                 </div>
                 <!-- Program buttons -->
                 <div class="buttons">
@@ -133,18 +147,80 @@
                     <div class="circle-image">
                         <img src="images/indonesia-flag-round-icon-128.png" alt="Indonesia Flag">
                     </div>
-                    <p class="countryText">Sri Lanka</p>
+                    <p class="countryText">Indonesia</p>
                     <!-- Like Button -->
-                     <button class="heart-btn" onclick="toggleLike(this)"></button>
+                    <button class="heart-btn" onclick="toggleLike(this)"></button>
+                    
                 </div>
+                <h4 style="padding: 5px;">Mangrove Reforestation</h4>
                 <!-- Image for program -->
-                <img src="images/baby-turtles-moving-towards-ocean.jpg" 
+                <div>
+                <img src="images/volunteers-team-dig-holes-plant-trees-woodland-ecosystem.jpg" 
                 alt="Program 1">
+                </div>
+                <!-- Program cards -->
+                <div class="cards">
+                    <div class="card"> 
+                        <div class="card-images">
+                            <img src="images/cards/—Pngtree—tree silhouette vector for cutting_5107644.png" alt="black and white tree">
+                        </div>
+                        <p>Reforestation</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-images">
+                            <img src="images/cards/—Pngtree—clock vector cartoon_3668551.png" alt="black and white clock">
+                        </div>
+                        <p>3 - 5 hours volunteering per day</p>    
+                    </div>
+                    <div class="card">
+                        <div class="card-images">
+                            <img src="images/cards/—Pngtree—coin money icon_5278199.png" alt="black and white money">
+                        </div>
+                        <p>Program fees from $150</p>
+                    </div>
+                    
+                </div>
+                <!-- duration time and volunteer ages -->
+                <div >
+                    <div class="durations_volunteer">
+                        <div class="icon">
+                            <img src="images/icons/clock.png" alt="Green colour clock">
+                        </div>
+                        <div class="iconText">
+                            <p>Durations from 1 - 16 weeks</p>
+                        </div>
+                    </div>
+                    <div class="durations_volunteer">
+                        <div class="icon">
+                            <img src="images/icons/user-icon.png" alt="Green colour clock">
+                        </div>
+                        <div class="iconText">
+                            <p>Volunteers aged 16+ and families</p>
+                        </div>
+                    </div>
+                </div>
                 <!-- Program content -->
                 <div class="program-content">
-                    <h3>Sea Turtle Conservation</h3>
-                    <p>Duration: 2 weeks</p>
-                    <p>Fee: £731</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Duration</th>
+                                <th>Program Fee</th>
+                                <th>Cost/Day</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2 weeks</td>
+                                <td>£435</td>
+                                <td>£31/day</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <p class="description">Mangrove reforestation restores coastal forests, protecting shorelines, supporting wildlife,
+                        and absorbing carbon to fight climate change.</p>
                 </div>
                 <!-- Program buttons -->
                 <div class="buttons">
@@ -159,18 +235,80 @@
                     <div class="circle-image">
                         <img src="images/indonesia-flag-round-icon-128.png" alt="Indonesia Flag">
                     </div>
-                    <p class="countryText">Thailand</p>
+                    <p class="countryText">Indonesia</p>
                     <!-- Like Button -->
-                     <button class="heart-btn" onclick="toggleLike(this)"></button>
+                    <button class="heart-btn" onclick="toggleLike(this)"></button>
+                    
                 </div>
+                <h4 style="padding: 5px;">Mangrove Reforestation</h4>
                 <!-- Image for program -->
+                <div>
                 <img src="images/volunteers-team-dig-holes-plant-trees-woodland-ecosystem.jpg" 
                 alt="Program 1">
+                </div>
+                <!-- Program cards -->
+                <div class="cards">
+                    <div class="card"> 
+                        <div class="card-images">
+                            <img src="images/cards/—Pngtree—tree silhouette vector for cutting_5107644.png" alt="black and white tree">
+                        </div>
+                        <p>Reforestation</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-images">
+                            <img src="images/cards/—Pngtree—clock vector cartoon_3668551.png" alt="black and white clock">
+                        </div>
+                        <p>3 - 5 hours volunteering per day</p>    
+                    </div>
+                    <div class="card">
+                        <div class="card-images">
+                            <img src="images/cards/—Pngtree—coin money icon_5278199.png" alt="black and white money">
+                        </div>
+                        <p>Program fees from $150</p>
+                    </div>
+                    
+                </div>
+                <!-- duration time and volunteer ages -->
+                <div >
+                    <div class="durations_volunteer">
+                        <div class="icon">
+                            <img src="images/icons/clock.png" alt="Green colour clock">
+                        </div>
+                        <div class="iconText">
+                            <p>Durations from 1 - 16 weeks</p>
+                        </div>
+                    </div>
+                    <div class="durations_volunteer">
+                        <div class="icon">
+                            <img src="images/icons/user-icon.png" alt="Green colour clock">
+                        </div>
+                        <div class="iconText">
+                            <p>Volunteers aged 16+ and families</p>
+                        </div>
+                    </div>
+                </div>
                 <!-- Program content -->
                 <div class="program-content">
-                    <h3>Plastic-Free Coastal Cleanup</h3>
-                    <p>Duration: 2 weeks</p>
-                    <p>Fee: £731</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Duration</th>
+                                <th>Program Fee</th>
+                                <th>Cost/Day</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2 weeks</td>
+                                <td>£435</td>
+                                <td>£31/day</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <p class="description">Mangrove reforestation restores coastal forests, protecting shorelines, supporting wildlife,
+                        and absorbing carbon to fight climate change.</p>
                 </div>
                 <!-- Program buttons -->
                 <div class="buttons">
@@ -185,18 +323,80 @@
                     <div class="circle-image">
                         <img src="images/indonesia-flag-round-icon-128.png" alt="Indonesia Flag">
                     </div>
-                    <p class="countryText">South Africa</p>
+                    <p class="countryText">Indonesia</p>
                     <!-- Like Button -->
-                     <button class="heart-btn" onclick="toggleLike(this)"></button>
+                    <button class="heart-btn" onclick="toggleLike(this)"></button>
+                    
                 </div>
+                <h4 style="padding: 5px;">Mangrove Reforestation</h4>
                 <!-- Image for program -->
+                <div>
                 <img src="images/volunteers-team-dig-holes-plant-trees-woodland-ecosystem.jpg" 
                 alt="Program 1">
+                </div>
+                <!-- Program cards -->
+                <div class="cards">
+                    <div class="card"> 
+                        <div class="card-images">
+                            <img src="images/cards/—Pngtree—tree silhouette vector for cutting_5107644.png" alt="black and white tree">
+                        </div>
+                        <p>Reforestation</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-images">
+                            <img src="images/cards/—Pngtree—clock vector cartoon_3668551.png" alt="black and white clock">
+                        </div>
+                        <p>3 - 5 hours volunteering per day</p>    
+                    </div>
+                    <div class="card">
+                        <div class="card-images">
+                            <img src="images/cards/—Pngtree—coin money icon_5278199.png" alt="black and white money">
+                        </div>
+                        <p>Program fees from $150</p>
+                    </div>
+                    
+                </div>
+                <!-- duration time and volunteer ages -->
+                <div >
+                    <div class="durations_volunteer">
+                        <div class="icon">
+                            <img src="images/icons/clock.png" alt="Green colour clock">
+                        </div>
+                        <div class="iconText">
+                            <p>Durations from 1 - 16 weeks</p>
+                        </div>
+                    </div>
+                    <div class="durations_volunteer">
+                        <div class="icon">
+                            <img src="images/icons/user-icon.png" alt="Green colour clock">
+                        </div>
+                        <div class="iconText">
+                            <p>Volunteers aged 16+ and families</p>
+                        </div>
+                    </div>
+                </div>
                 <!-- Program content -->
                 <div class="program-content">
-                    <h3>Wildlife Rescue & Rehabilitation</h3>
-                    <p>Duration: 2 weeks</p>
-                    <p>Fee: £731</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Duration</th>
+                                <th>Program Fee</th>
+                                <th>Cost/Day</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2 weeks</td>
+                                <td>£435</td>
+                                <td>£31/day</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <p class="description">Mangrove reforestation restores coastal forests, protecting shorelines, supporting wildlife,
+                        and absorbing carbon to fight climate change.</p>
                 </div>
                 <!-- Program buttons -->
                 <div class="buttons">
