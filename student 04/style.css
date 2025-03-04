@@ -1,7 +1,7 @@
 /* Global Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #139e4e;
+    background-color: #41c979;
     margin: 0;
     padding: 0;
 }
@@ -10,15 +10,15 @@ body {
 .container {
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
-    margin: auto;
+    max-width: auto;
+    margin: 12px 0;
     padding: 20px;
 }
 
 /* Sidebar (Profile Section) */
 .sidebar {
     width: 25%;
-    background: #72bf92;
+    background: #3d875c;
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -54,6 +54,7 @@ body {
 /* Skills Bar */
 .skill-bar {
     background: #ddd;
+    width:100%; /*Ensure skill bars span the full width*/
     border-radius: 10px;
     padding:5px;
     display:flex;
@@ -65,9 +66,11 @@ body {
 .skill-bar span {
     display: block;
     height: 100%;
-    background: #ffb400;
+    background: #ed9b0d;
     border-radius: 10px;
 }
+
+
 /* Main Content */
 .main-content {
     width: 45%;
@@ -102,8 +105,9 @@ body {
 /* Contact Form */
 .contact-form input, .contact-form textarea {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
+    max-width:300px
+    padding: 20px;
+    margin: 12px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -111,7 +115,7 @@ body {
 .contact-form button {
     width: 100%;
     padding: 10px;
-    background: #72bf92;
+    background: #86d9a9;
     color: white;
     border: none;
     border-radius: 5px;
@@ -119,5 +123,5 @@ body {
 }
 
 .contact-form button:hover {
-    background: #31406a;
+    background: #058042;
 }
