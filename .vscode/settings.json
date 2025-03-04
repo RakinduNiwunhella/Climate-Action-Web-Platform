@@ -1,3 +1,4 @@
 {
-    "livePreview.defaultPreviewPath": "/student 01/volunteer page/volunteer_page.html"
+    "livePreview.defaultPreviewPath": "/student 01/volunteer page/volunteer_page.html",
+    "liveServer.settings.port": 5501
 }
