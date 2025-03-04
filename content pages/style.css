@@ -1,0 +1,124 @@
+/* Global Styles for Climate Action Theme */
+:root {
+    --primary-green: #2E7D32;
+    --primary-blue: #2196F3;
+    --neutral-light: #F5F5F5;
+    --neutral-dark: #212121;
+}
+
+/* Reset default margins/padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--neutral-light);
+    color: var(--neutral-dark);
+    line-height: 1.6;
+}
+
+/* Wrapper to center content */
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-color: #97999c36;
+}
+
+/* Header Styles */
+header {
+    background-color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Navigation Bar */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--neutral-dark);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-green);
+    border-bottom: 2px solid var(--primary-green);
+}
+
+/* Active Page Highlight */
+.nav-links .active a {
+    color: var(--primary-green);
+    border-bottom: 2px solid var(--primary-green);
+}
+
+/* Main Content Area */
+main {
+    padding: 2rem 0;
+    min-height: 70vh;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--primary-green);
+    color: white;
+    padding: 2rem 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.editor-links {
+    margin: 1rem 0;
+}
+
+.editor-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9rem;
+}
+
+.editor-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+p{
+    font-size: 20px ; 
+    font-family: 'Times New Roman', Times, serif;
+}
+h2{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
