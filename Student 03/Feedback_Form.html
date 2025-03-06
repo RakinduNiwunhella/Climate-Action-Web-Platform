@@ -6,12 +6,11 @@
         <style>
             body{
                 font-family: 'Times New Roman', Times, serif;
-                margin: 20px;
-                text-align: center;
+                margin: 20px;    
             }
 
             .form-container {
-                max-width: 500px;
+                max-width: 100%;
                 margin: 0 auto;
                 background-color: #aee0f9;
                 padding: 20px;
@@ -21,6 +20,7 @@
 
             .note{
                 font-style: italic;
+                text-align: center;
                 font-size: 0.9em;
                 color: red;
                 margin-bottom: 10px;
@@ -85,26 +85,28 @@
     </head>
     <body>
     <div class="form-container">
-        <h2 style="color: #0c70a2;">Feedback Form</h2>
-        <p class="note">Required fields <span class="required">*</span></p>
-    
+    <header>
+        <h1 style="color: #0c70a2; text-align: center;">Feedback Form</h1>
+        <h2 class="note">Required fields <span class="required">*</span></h2>
+    </header>
+    <main>
     <fieldset>
         <legend>Personal Details</legend>
         <div><!--name-->
             <label for="name">Enter your name:<span class="required">*</span></label>
-            <input type="text" id="name" name="name" value="Enter your name here" required/>
+            <input type="text" id="name" name="name" placeholder="Enter your name here" required/>
         </div>
         <div><!--email-->
             <label for="email">Enter your email:<span class="required">*</span></label>
-            <input type="email" id="email" name="email" value="Enter your email here" required/>
+            <input type="email" id="email" name="email" placeholder="Enter your email here" required/>
         </div>
         <div><!--telephone no.-->
             <label for="tel-no.">Enter your Telephone Number:<span class="required">*</span></label>
-            <input type="tel" id="phone" name="phone" value="Ex. 0712345678" size="10" required/>
+            <input type="tel" id="phone" name="phone" placeholder="Ex. 0712345678" size="10" required/>
       </div>
       <div><!--address-->
             <label for="address">Enter your Address:<span class="required">*</span></label>
-            <input type="text" id="email" name="email" value="Enter your address here" required/>
+            <input type="text" id="address" name="address" placeholder="Enter your address here" required/>
       </div>
     </fieldset>
     <fieldset>
@@ -131,23 +133,6 @@
             <label for="note">If "No", suggest any improvements for the future: </label>
             <textarea name="note" id="note" rows="2" cols="20">Add your message here... </textarea>
         </div>
-        <div class="rating-container">
-            <p><strong>How satisfied are you with our services?</strong></p>
-            <p>Choose from 1 to 10, with 1 being "Not satisfied at all!" and 10 being "Extremely satisfied!"</p>
-            <div class="rating-options">
-                <!-- Generate radio buttons from 1 to 10 -->
-                <label>1 <input type="radio" name="satisfaction" value="1"></label>
-                <label>2 <input type="radio" name="satisfaction" value="2"></label>
-                <label>3 <input type="radio" name="satisfaction" value="3"></label>
-                <label>4 <input type="radio" name="satisfaction" value="4"></label>
-                <label>5 <input type="radio" name="satisfaction" value="5"></label>
-                <label>6 <input type="radio" name="satisfaction" value="6"></label>
-                <label>7 <input type="radio" name="satisfaction" value="7"></label>
-                <label>8 <input type="radio" name="satisfaction" value="8"></label>
-                <label>9 <input type="radio" name="satisfaction" value="9"></label>
-                <label>10 <input type="radio" name="satisfaction" value="10"></label>
-            </div>
-        </div>
         <div>
             <label>Would you recommend our services?</label>
             <br>
@@ -169,7 +154,35 @@
             <textarea name="note" id="note" rows="5" cols="20">Add your message here... </textarea>
         </div>
     </fieldset>
+    <fieldset>
+    <legend>Rate Us</legend>
+    <div class="rating">
+        <span>&#128542;</span>
+        <span>&#128577;</span>
+        <span>&#128528;</span>
+        <span>&#128522;</span>
+        <span>&#128525;</span>
+    </div>
+    <div class="rating-container">
+        <p><strong>How satisfied are you with our services?</strong></p>
+        <p>Choose from 1 to 10, with 1 being "Not satisfied at all!" and 10 being "Extremely satisfied!"</p>
+        <div class="rating-options">
+            <!-- Generate radio buttons from 1 to 10 -->
+            <label>1 <input type="radio" name="satisfaction" value="1"></label>
+            <label>2 <input type="radio" name="satisfaction" value="2"></label>
+            <label>3 <input type="radio" name="satisfaction" value="3"></label>
+            <label>4 <input type="radio" name="satisfaction" value="4"></label>
+            <label>5 <input type="radio" name="satisfaction" value="5"></label>
+            <label>6 <input type="radio" name="satisfaction" value="6"></label>
+            <label>7 <input type="radio" name="satisfaction" value="7"></label>
+            <label>8 <input type="radio" name="satisfaction" value="8"></label>
+            <label>9 <input type="radio" name="satisfaction" value="9"></label>
+            <label>10 <input type="radio" name="satisfaction" value="10"></label>
+        </div>
+    </div>
+    </fieldset>
         <button type="Submit">Submit</button>
     </div>
+    </main>
     </body>
 </html>
