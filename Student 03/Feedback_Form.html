@@ -87,7 +87,9 @@
     <div class="form-container">
         <h2 style="color: #0c70a2;">Feedback Form</h2>
         <p class="note">Required fields <span class="required">*</span></p>
-        
+    
+    <fieldset>
+        <legend>Personal Details</legend>
         <div><!--name-->
             <label for="name">Enter your name:<span class="required">*</span></label>
             <input type="text" id="name" name="name" value="Enter your name here" required/>
@@ -104,6 +106,9 @@
             <label for="address">Enter your Address:<span class="required">*</span></label>
             <input type="text" id="email" name="email" value="Enter your address here" required/>
       </div>
+    </fieldset>
+    <fieldset>
+        <legend>Feedback Details</legend>
         <div>
               <label>Was this your first time visiting? </label>
               <br>
@@ -163,6 +168,7 @@
             <label for="note">Do you have any additional questions or requests?</label>
             <textarea name="note" id="note" rows="5" cols="20">Add your message here... </textarea>
         </div>
+    </fieldset>
         <button type="Submit">Submit</button>
     </div>
     </body>
