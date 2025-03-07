@@ -3,144 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volunteer Programs</title>
+    <title>Review Section</title>
     <style>
-        .program-card {
-            flex: 1;
-            min-width: 300px;
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .countryCircle {
-            display: flex;
-            align-items: center;
-            gap: 5px; /* Space between flag and text */
-            padding: 10px;
-            position: relative; /* For absolute positioning of the heart button */
-        }
-
-        .circle-image {
-            width: 15px;  /* Really small size */
-            height: 15px;
-            border-radius: 50%;
-            overflow: hidden;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
+            min-height: 100vh;
+            background-color: #f8f8f8;
         }
-
-        .circle-image img {
+        .container {
+            width: 700px;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+        .left-section {
+            width: 30%;
+        }
+        .right-section {
+            width: 70%;
+        }
+        .rating {
+            font-size: 32px;
+            color: green;
+            font-weight: bold;
+        }
+        .subtext {
+            color: gray;
+        }
+        .reviews {
+            margin-top: 20px;
+        }
+        .review-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: #fff;
+        }
+        .review-author {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .review-date {
+            color: gray;
+            font-size: 12px;
+        }
+        .feedback-section {
+            margin-top: 20px;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+        .emoji-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 10px 0;
+        }
+        .emoji-buttons button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        textarea {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: 80px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 10px;
+            resize: none;
         }
-
-        .countryText {
-            font-size: 14px; /* Slightly smaller text for balance */
-            color: #333;
-            margin: 0;
+        .buttons {
+            margin-top: 10px;
+            text-align: right;
         }
-
-        /* Heart button styles */
-        .heart-btn {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 20px;
-            height: 20px;
-            background-color: transparent;
+        .buttons button {
+            padding: 10px 15px;
             border: none;
             cursor: pointer;
-            padding: 0;
-            outline: none;
-            transition: color 0.3s ease;
-        }
-
-        .heart-btn::before {
-            content: "♥";
-            font-size: 20px;
-            color: #ddd; /* Default heart color */
-            transition: color 0.3s ease;
-        }
-
-        .heart-btn.liked::before {
-            color: red; /* Color when liked */
-        }
-
-        .program-card:hover {
-            transform: scale(1.05);
-        }
-
-        .program-card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
-
-        .program-content {
-            padding: 15px;
-        }
-
-        .buttons {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px;
-        }
-
-        .button {
-            background: #28a745;
-            color: white;
-            padding: 10px;
             border-radius: 5px;
-            text-align: center;
-            flex: 1;
-            margin: 0 5px;
-            cursor: pointer;
-            transition: background 0.3s ease;
+            font-weight: bold;
         }
-
-        .button:hover {
-            background: #218838;
+        .send-btn {
+            background-color: green;
+            color: white;
+        }
+        .cancel-btn {
+            background-color: lightgray;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: gray;
         }
     </style>
 </head>
 <body>
-    <div class="program-card">
-        <!-- Country flag and name -->
-        <div class="countryCircle">
-            <div class="circle-image">
-                <img src="images/indonesia-flag-round-icon-128.png" alt="Indonesia Flag">
+    <header>
+        <h1>My Website Header</h1>
+        <nav>
+            <a href="template.html">Home</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="left-section">
+            <div class="rating">9.4/10</div>
+            <p class="subtext">Exceptional</p>
+            <p class="subtext">109 reviews</p>
+            <button>See all 109 reviews</button>
+        </div>
+        <div class="right-section">
+            <div class="reviews">
+                <div class="review-card">
+                    <strong>10/10 Excellent</strong>
+                    <p>Wir hatten einen tollen 4-tägigen Aufenthalt mit zwei Erwachsenen und drei Kindern...</p>
+                    <div class="review-author">Daniela G.</div>
+                    <div class="review-date">Aug 12, 2019</div>
+                </div>
+                <div class="review-card">
+                    <strong>10/10 Excellent</strong>
+                    <p>We booked for 10 days and found Enrico to be very accommodating...</p>
+                    <div class="review-author">Dr Jean M B.</div>
+                    <div class="review-date">Aug 16, 2018</div>
+                </div>
             </div>
-            <p class="countryText">Indonesia</p>
-            <!-- Like Button -->
-            <button class="heart-btn" onclick="toggleLike()"></button> 
-        </div>
-        <!-- Image for program -->
-        <img src="images/volunteers-team-dig-holes-plant-trees-woodland-ecosystem.jpg" 
-        alt="Program 1">
-        <!-- Program content -->
-        <div class="program-content">
-            <h3>Mangrove Reforestation</h3>
-            <p>Duration: 2 weeks</p>
-            <p>Fee: £731</p>
-        </div>
-        <!-- Program buttons -->
-        <div class="buttons">
-            <div class="button">View Project</div>
-            <div class="button">Apply</div>
+
+            <div class="feedback-section">
+                <h3>Send us your review</h3>
+                <p>Got suggestions? We'd love to hear them! (Optional)</p>
+                <div class="emoji-buttons">
+                    <button>&#128577;</button>
+                    <button>&#128528;</button>
+                    <button>&#128578;</button>
+                    <button>&#128515;</button>
+                </div>
+                <textarea placeholder="Write your review here..."></textarea>
+                <div class="buttons">
+                    <button class="send-btn">Send Feedback</button>
+                    <button class="cancel-btn">Cancel</button>
+                </div>
+            </div>
         </div>
     </div>
-
-    <script>
-        function toggleLike() {
-            const heartButton = document.querySelector('.heart-btn');
-            heartButton.classList.toggle('liked');
-        }
-    </script>
 </body>
 </html>

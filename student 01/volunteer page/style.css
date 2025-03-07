@@ -1,170 +1,115 @@
+/* Global Styles for Climate Action Theme */
+:root {
+    --primary-green: #2E7D32;
+    --primary-blue: #2196F3;
+    --neutral-light: #F5F5F5;
+    --neutral-dark: #212121;
+}
+
+/* Reset default margins/padding */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
+
 body {
-    background-color: #f8f8f8;
-    padding: 20px;
-}
-.container {
-    max-width: 900px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-.dropdown {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-select {
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
-.programs {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    overflow-x: auto;
-    padding-bottom: 10px;
-    margin-top: 50px;
-}
-.program-card {
-    flex: 1;
-    min-width: 300px;
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--neutral-light);
+    color: var(--neutral-dark);
+    line-height: 1.6;
 }
 
-.countryCircle {
-    display: flex;
-    align-items: center;
-    gap: 5px; /* Space between flag and text */
-    padding: 10px;
-    position: relative; /* For absolute positioning of the heart button */
+/* Wrapper to center content */
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.circle-image {
-    width: 30px;  /* Really small size */
-    height: 30px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 1px solid #8b8a8a;
+/* Header Styles */
+header {
+    background-color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Navigation Bar */
+.nav-links {
     display: flex;
     justify-content: center;
-    align-items: center;
+    list-style: none;
+    margin-top: 1rem;
 }
 
-.circle-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.nav-links li {
+    margin: 0 15px;
 }
 
-.countryText {
-    font-size: 14px; /* Slightly smaller text for balance */
-    color: #333;
-    margin: 0;
+.nav-links a {
+    text-decoration: none;
+    color: var(--neutral-dark);
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-/* Heart button styles */
-.heart-btn {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    outline: none;
-    transition: color 0.3s ease;
+.nav-links a:hover {
+    color: var(--primary-green);
+    border-bottom: 2px solid var(--primary-green);
 }
 
-.heart-btn::before {
-    content: "♥";
-    font-size: 20px;
-    color: #ddd; /* Default heart color */
-    transition: color 0.3s ease;
+/* Active Page Highlight */
+.nav-links .active a {
+    color: var(--primary-green);
+    border-bottom: 2px solid var(--primary-green);
 }
 
-.heart-btn.liked::before {
-    color: red; /* Color when liked */
+/* Main Content Area */
+main {
+    padding: 2rem 0;
+    min-height: 70vh;
 }
 
-.program-card:hover {
-    transform: scale(1.05);
-}
-
-.program-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.program-content {
-    padding: 15px;
-}
-
-.buttons {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-}
-
-.button {
-    background: #28a745;
+/* Footer Styles */
+footer {
+    background-color: var(--primary-green);
     color: white;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-    flex: 1;
-    margin: 0 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    padding: 2rem 0;
+    margin-top: auto;
 }
 
-.button:hover {
-    background: #218838;
+.footer-content {
+    text-align: center;
 }
-.reviews, .feedback {
-    margin-top: 20px;
+
+.editor-links {
+    margin: 1rem 0;
 }
-.review-card {
-    background: #f4f4f4;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+
+.editor-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9rem;
 }
-.feedback textarea {
-    width: 100%;
-    height: 100px;
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+
+.editor-links a:hover {
+    text-decoration: underline;
 }
-.rating {
-    display: flex;
-    gap: 5px;
-    margin-top: 10px;
-}
-.rating span {
-    font-size: 24px;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-.rating span:hover {
-    transform: scale(1.2);
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
 }
