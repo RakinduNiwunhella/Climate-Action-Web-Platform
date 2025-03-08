@@ -6,20 +6,19 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .image-container {
-            position: relative;
+            position: absolute;
             width: 100%;
-            max-width: 600px; /* Adjust width as needed */
         }
         /* The image*/
         .image-container img {
             width: 100%;
-            height: auto;
+            height: 100%;
             display: block;
             transition:transform 0.5s ease-in-out;/*smooth zoom effect*/
         }
 
         .text-overlay {
-            position: absolute;
+            position: relative;
             top: 50%; /* Adjust to move text vertically */
             left: 50%; /* Adjust to move text horizontally */
             transform: translate(-50%, -50%); /* Centers text */
@@ -48,7 +47,7 @@
 </head>
 <body>
     <div class="image-container">
-        <img src=D:\IIT\Web D\WEB-CW\student 04\images\climate change.jpg alt="image">
+        <img src="images/climate change.jpg" alt="people holding boards saying save the planet">
     </div>
     <div class="container">
         <!-- Left Sidebar -->
