@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Meet Our Team</title>
   <style>
-    /* Basic reset and body styling */
+    /* Basic styling for body and header */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -16,85 +16,59 @@
       background: #333;
       color: #fff;
       text-align: center;
-      padding: 1rem;
+      padding: 1.5rem 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
     }
     /* Container for team cards */
     .team {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      margin: 2rem;
+      padding: 2rem;
+      gap: 2rem;
     }
+    /* Team card styling - made bigger */
     .team-card {
       background: #fff;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      margin: 1rem;
-      width: 250px;
-      text-align: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      width: 320px;
+      overflow: hidden;
       transition: transform 0.3s, box-shadow 0.3s;
     }
     .team-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
     .team-card img {
       width: 100%;
-      border-top-left-radius: 8px;
-      border-top-right-radius: 8px;
+      display: block;
     }
-    .team-card h2 {
-      margin: 0.5rem 0;
-    }
-    .team-card p {
-      color: #555;
-    }
-    .team-card button {
-      background: #007BFF;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      padding: 0.5rem 1rem;
-      margin-bottom: 1rem;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .team-card button:hover {
-      background: #0056b3;
-    }
-    /* Modal styles */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 100;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background: rgba(0,0,0,0.7);
-    }
-    .modal-content {
-      background: #fff;
-      margin: 10% auto;
-      padding: 1rem;
-      border-radius: 8px;
-      width: 80%;
-      max-width: 500px;
-      position: relative;
+    .info {
+      padding: 1.5rem;
       text-align: center;
     }
-    .modal-content img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 1rem;
+    .info h2 {
+      margin: 0.5rem 0;
+      font-size: 1.5rem;
     }
-    .close {
-      position: absolute;
-      top: 10px;
-      right: 20px;
-      font-size: 24px;
-      cursor: pointer;
+    .info p {
+      margin: 0.5rem 0;
+      color: #555;
+    }
+    /* Hover effect for additional details */
+    .more-info {
+      opacity: 0;
+      transition: opacity 0.3s;
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 1rem;
+    }
+    .team-card:hover .more-info {
+      opacity: 1;
     }
   </style>
 </head>
@@ -104,106 +78,41 @@
   </header>
   <section class="team">
     <!-- Team Card 1 -->
-    <div class="team-card" data-member="0">
-      <img src="https://via.placeholder.com/250x150" alt="Jane Doe">
-      <h2>Jane Doe</h2>
-      <p>Project Manager</p>
-      <button class="view-profile">View Profile</button>
+    <div class="team-card">
+      <img src="https://via.placeholder.com/320x220" alt="Jane Doe">
+      <div class="info">
+        <h2>Jane Doe</h2>
+        <p>Project Manager</p>
+        <p class="more-info">Jane ensures the project is delivered with excellence and leads with vision.</p>
+      </div>
     </div>
     <!-- Team Card 2 -->
-    <div class="team-card" data-member="1">
-      <img src="https://via.placeholder.com/250x150" alt="John Smith">
-      <h2>John Smith</h2>
-      <p>Lead Developer</p>
-      <button class="view-profile">View Profile</button>
+    <div class="team-card">
+      <img src="https://via.placeholder.com/320x220" alt="John Smith">
+      <div class="info">
+        <h2>John Smith</h2>
+        <p>Lead Developer</p>
+        <p class="more-info">John spearheads the development team, bringing innovative solutions.</p>
+      </div>
     </div>
     <!-- Team Card 3 -->
-    <div class="team-card" data-member="2">
-      <img src="https://via.placeholder.com/250x150" alt="Emily Johnson">
-      <h2>Emily Johnson</h2>
-      <p>UI/UX Designer</p>
-      <button class="view-profile">View Profile</button>
+    <div class="team-card">
+      <img src="https://via.placeholder.com/320x220" alt="Emily Johnson">
+      <div class="info">
+        <h2>Emily Johnson</h2>
+        <p>UI/UX Designer</p>
+        <p class="more-info">Emily crafts user-friendly interfaces and delightful user experiences.</p>
+      </div>
     </div>
     <!-- Team Card 4 -->
-    <div class="team-card" data-member="3">
-      <img src="https://via.placeholder.com/250x150" alt="Michael Lee">
-      <h2>Michael Lee</h2>
-      <p>QA Engineer</p>
-      <button class="view-profile">View Profile</button>
+    <div class="team-card">
+      <img src="https://via.placeholder.com/320x220" alt="Michael Lee">
+      <div class="info">
+        <h2>Michael Lee</h2>
+        <p>QA Engineer</p>
+        <p class="more-info">Michael is dedicated to quality assurance, testing with precision.</p>
+      </div>
     </div>
   </section>
-  
-  <!-- Modal for additional member info -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <img id="modal-photo" src="" alt="Team Member Photo">
-      <h2 id="modal-name"></h2>
-      <p id="modal-role"></p>
-      <p id="modal-description"></p>
-    </div>
-  </div>
-  
-  <script>
-    // Data for team members – customize this as needed
-    const teamMembers = [
-      {
-        name: "Jane Doe",
-        role: "Project Manager",
-        photo: "https://via.placeholder.com/250x150",
-        description: "Jane oversees the project, ensuring that tasks are managed efficiently and communication flows seamlessly."
-      },
-      {
-        name: "John Smith",
-        role: "Lead Developer",
-        photo: "https://via.placeholder.com/250x150",
-        description: "John spearheads the development efforts and ensures that both front-end and back-end systems run flawlessly."
-      },
-      {
-        name: "Emily Johnson",
-        role: "UI/UX Designer",
-        photo: "https://via.placeholder.com/250x150",
-        description: "Emily creates intuitive designs and user-friendly interfaces that provide a smooth user experience."
-      },
-      {
-        name: "Michael Lee",
-        role: "QA Engineer",
-        photo: "https://via.placeholder.com/250x150",
-        description: "Michael is dedicated to quality assurance, rigorously testing every feature to maintain high standards."
-      }
-    ];
-    
-    // Get modal elements
-    const modal = document.getElementById("modal");
-    const modalPhoto = document.getElementById("modal-photo");
-    const modalName = document.getElementById("modal-name");
-    const modalRole = document.getElementById("modal-role");
-    const modalDescription = document.getElementById("modal-description");
-    const closeBtn = document.querySelector(".close");
-    
-    // Add click event listeners for each "View Profile" button
-    document.querySelectorAll(".view-profile").forEach(button => {
-      button.addEventListener("click", function() {
-        const memberIndex = this.parentElement.getAttribute("data-member");
-        const member = teamMembers[memberIndex];
-        modalPhoto.src = member.photo;
-        modalName.textContent = member.name;
-        modalRole.textContent = member.role;
-        modalDescription.textContent = member.description;
-        modal.style.display = "block";
-      });
-    });
-    
-    // Close the modal when the close button is clicked or when clicking outside the modal content
-    closeBtn.addEventListener("click", function() {
-      modal.style.display = "none";
-    });
-    
-    window.addEventListener("click", function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    });
-  </script>
 </body>
 </html>
