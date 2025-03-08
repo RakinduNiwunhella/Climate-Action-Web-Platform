@@ -18,6 +18,18 @@
             
         }
 
+        .table-wrapper {
+            width: 80%; /* Adjust as needed (e.g., 70%, 90%) */
+            margin: 0 auto; /* Centers the table */
+            overflow-x: auto; /* Enables horizontal scrolling if needed */
+        }
+
+        /* Ensure table fits within the wrapper */
+        .climate-table {
+            width: 100%; /* Fits within .table-wrapper */
+            max-width: 100%; /* Prevents table from overflowing */
+        }
+
         .climate-table th, .climate-table td {
             padding: 1rem;
             text-align: left;
@@ -105,23 +117,25 @@
         <main>
             <h1 style="text-align: center; margin: 2rem 0;">Global Climate Action Progress Metrics 2024</h1>
             
-            <table class="climate-table">
-                <caption>(Data Source: UNEP, IEA, and National Reports)</caption>
-                <thead>
-                    <tr>
-                        <th title="Country/Region">🌍 Country</th>
-                        <th title="CO₂ Emissions (Metric Tons/Year)">
-                            <i class="fas fa-smog"></i> CO₂ Emissions
-                        </th>
-                        <th title="Renewable Energy (%)">
-                            <i class="fas fa-solar-panel"></i> Renewable Energy (% of total energy)
-                        </th>
-                        <th title="Key Climate Initiatives">
-                            <i class="fas fa-seedling"></i> Key Initiatives
-                        </th>
-                        <th title="SDG 13 Alignment Status">Impact/Goal Alignment</th>
-                    </tr>
-                </thead>
+            <div class="table-wrapper">
+                <table class="climate-table">
+                    <caption>(Data Source: UNEP, IEA, and National Reports)</caption>
+                    <thead>
+                        <tr>
+                            <th title="Country/Region">🌍 Country</th>
+                            <th title="CO₂ Emissions (Metric Tons/Year)">
+                                <i class="fas fa-smog"></i> CO₂ Emissions
+                            </th>
+                            <th title="Renewable Energy (%)">
+                                <i class="fas fa-solar-panel"></i> Renewable Energy (% of total energy)
+                            </th>
+                            <th title="Key Climate Initiatives">
+                                <i class="fas fa-seedling"></i> Key Initiatives
+                            </th>
+                            <th title="SDG 13 Alignment Status">Impact/Goal Alignment</th>
+                        </tr>
+                    </thead>
+
                 <tbody>
                     <tr>
                         <td><img src="images/usN.svg" class="country-flag" alt="USA"> USA</td>
