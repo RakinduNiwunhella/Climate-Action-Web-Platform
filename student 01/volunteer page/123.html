@@ -1,546 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Climate Action Hub | Home</title>
-    <link rel="stylesheet" href="style1.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meet Our Team</title>
+  <style>
+    /* Basic reset and body styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f0f0f0;
+      color: #333;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+    /* Container for team cards */
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 2rem;
+    }
+    .team-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin: 1rem;
+      width: 250px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .team-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .team-card img {
+      width: 100%;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+    .team-card h2 {
+      margin: 0.5rem 0;
+    }
+    .team-card p {
+      color: #555;
+    }
+    .team-card button {
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 0.5rem 1rem;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .team-card button:hover {
+      background: #0056b3;
+    }
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background: rgba(0,0,0,0.7);
+    }
+    .modal-content {
+      background: #fff;
+      margin: 10% auto;
+      padding: 1rem;
+      border-radius: 8px;
+      width: 80%;
+      max-width: 500px;
+      position: relative;
+      text-align: center;
+    }
+    .modal-content img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-    <!-- Wrapper to center content -->
-    <div class="wrapper">
-        <!-- Header Section -->
-        <header>
-            <!-- Logo -->
-            <div class="logo">
-                <img src="images/logo.png" alt="Climate Action Logo" width="120">
-            </div>
-
-            <!-- Navigation Bar -->
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="volunteer.html">Volunteer</a></li>
-                    <li><a href="table.html">Climate Data</a></li>
-                    <li><a href="profile.html">Profile</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
-                    <li><a href="team.html">Team</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <!-- Main Content Area -->
-        <main>
-            <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volunteer Programs</title>
-    <link rel="stylesheet" href="style.css">
+  <header>
+    <h1>Meet Our Team</h1>
+  </header>
+  <section class="team">
+    <!-- Team Card 1 -->
+    <div class="team-card" data-member="0">
+      <img src="https://via.placeholder.com/250x150" alt="Jane Doe">
+      <h2>Jane Doe</h2>
+      <p>Project Manager</p>
+      <button class="view-profile">View Profile</button>
+    </div>
+    <!-- Team Card 2 -->
+    <div class="team-card" data-member="1">
+      <img src="https://via.placeholder.com/250x150" alt="John Smith">
+      <h2>John Smith</h2>
+      <p>Lead Developer</p>
+      <button class="view-profile">View Profile</button>
+    </div>
+    <!-- Team Card 3 -->
+    <div class="team-card" data-member="2">
+      <img src="https://via.placeholder.com/250x150" alt="Emily Johnson">
+      <h2>Emily Johnson</h2>
+      <p>UI/UX Designer</p>
+      <button class="view-profile">View Profile</button>
+    </div>
+    <!-- Team Card 4 -->
+    <div class="team-card" data-member="3">
+      <img src="https://via.placeholder.com/250x150" alt="Michael Lee">
+      <h2>Michael Lee</h2>
+      <p>QA Engineer</p>
+      <button class="view-profile">View Profile</button>
+    </div>
+  </section>
+  
+  <!-- Modal for additional member info -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modal-photo" src="" alt="Team Member Photo">
+      <h2 id="modal-name"></h2>
+      <p id="modal-role"></p>
+      <p id="modal-description"></p>
+    </div>
+  </div>
+  
+  <script>
+    // Data for team members – customize this as needed
+    const teamMembers = [
+      {
+        name: "Jane Doe",
+        role: "Project Manager",
+        photo: "https://via.placeholder.com/250x150",
+        description: "Jane oversees the project, ensuring that tasks are managed efficiently and communication flows seamlessly."
+      },
+      {
+        name: "John Smith",
+        role: "Lead Developer",
+        photo: "https://via.placeholder.com/250x150",
+        description: "John spearheads the development efforts and ensures that both front-end and back-end systems run flawlessly."
+      },
+      {
+        name: "Emily Johnson",
+        role: "UI/UX Designer",
+        photo: "https://via.placeholder.com/250x150",
+        description: "Emily creates intuitive designs and user-friendly interfaces that provide a smooth user experience."
+      },
+      {
+        name: "Michael Lee",
+        role: "QA Engineer",
+        photo: "https://via.placeholder.com/250x150",
+        description: "Michael is dedicated to quality assurance, rigorously testing every feature to maintain high standards."
+      }
+    ];
     
-
-    <style>
-.feedback {
-    margin-top: 20px;
-}
-
-.feedback textarea {
-    width: 100%;
-    height: 100px;
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-.rating-emojis {
-    display: flex;
-    gap: 5px;
-    margin-top: 10px;
-}
-.rating span {
-    font-size: 24px;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-.rating span:hover {
-    transform: scale(1.2);
-}
-.reviews-container{
-    display: flex;
-    text-align: left;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.ratings{
-    width: 30%;
-}
-.right-section{
-    left: 70%;
-}
-.reviews {
-            margin-top: 20px;
-        }
-        .review-card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 15px;
-            background: #fff;
-        }
-        .review-author {
-            font-weight: bold;
-            margin-top: 10px;
-        }
-        .review-date {
-            color: gray;
-            font-size: 12px;
-        }
-
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="dropdown">
-            <label for="sort">Sort by:</label>
-            <select id="sort">
-                <option>Most Popular</option>
-                <option>Lowest Price</option>
-                <option>Highest Rated</option>
-            </select>
-        </div>
-        <h2>301 Volunteer Programs Found</h2>
-        <p>Matching With 1 Filter <br> Showing 1 to 4 of 301 Results</p>
- 
-        <div class="programs">
-<!--Program Card div 01 -->
-            <div class="program-card">
-                <!-- Country flag and name -->
-                <div class="countryCircle">
-                    <div class="circle-image">
-                        <img src="images/country-flags/indonesia-flag-round-icon-128.png" alt="Indonesia Flag">
-                    </div>
-                    <p class="countryText">Indonesia</p>
-                    <!-- Like Button -->
-                     <button class="heart-btn" onclick="toggleLike(this)"></button>
-                     
-                </div>
-                <h4 style="padding: 5px;">Mangrove Reforestation</h4>
-                <!-- Image for program -->
-                 <div>
-                <img src="images/card-image/volunteers-team-dig-holes-plant-trees-woodland-ecosystem.jpg" 
-                alt="Program 1">
-                 </div>
-                 <!-- Program cards -->
-                 <div class="cards">
-                    <div class="card"> 
-                        <div class="card-images">
-                            <img src="images/cards/—Pngtree—tree silhouette vector for cutting_5107644.png" alt="black and white tree">
-                        </div>
-                        <p>Reforestation</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-images">
-                            <img src="images/cards/—Pngtree—clock vector cartoon_3668551.png" alt="black and white clock">
-                        </div>
-                        <p>3 - 5 hours volunteering per day</p>    
-                    </div>
-                    <div class="card">
-                        <div class="card-images">
-                            <img src="images/cards/—Pngtree—coin money icon_5278199.png" alt="black and white money">
-                        </div>
-                        <p>Program fees from $150</p>
-                    </div>
-                    
-                 </div>
-                 <!-- duration time and volunteer ages -->
-                  <div >
-                    <div class="durations_volunteer">
-                        <div class="icon">
-                            <img src="images/icons/clock.png" alt="Green colour clock">
-                        </div>
-                        <div class="iconText">
-                            <p>Durations from 1 - 16 weeks</p>
-                        </div>
-                    </div>
-                    <div class="durations_volunteer">
-                        <div class="icon">
-                            <img src="images/icons/user-icon.png" alt="Green colour clock">
-                        </div>
-                        <div class="iconText">
-                            <p>Volunteers aged 16+ and families</p>
-                        </div>
-                    </div>
-                  </div>
-                <!-- Program content -->
-                <div class="program-content">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Duration</th>
-                                <th>Program Fee</th>
-                                <th>Cost/Day</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>2 weeks</td>
-                                <td>£435</td>
-                                <td>£31/day</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div>
-                    <p class="description">Mangrove reforestation restores coastal forests, protecting shorelines, supporting wildlife,
-                         and absorbing carbon to fight climate change.</p>
-                </div>
-                <!-- Program buttons -->
-                <div class="buttons">
-                    <div class="button">View Project</div>
-                    <div class="button">Apply</div>
-                </div>
-            </div>
-<!--Program Card div 02 -->
-            <div class="program-card">
-                <!-- Country flag and name -->
-                <div class="countryCircle">
-                    <div class="circle-image">
-                        <img  src="images/country-flags/mexico-flag-round-icon-64.png" alt="Indonesia Flag">
-                    </div>
-                    <p class="countryText">Mexico</p>
-                    <!-- Like Button -->
-                    <button class="heart-btn" onclick="toggleLike(this)"></button>
-                    
-                </div>
-                <h4 style="padding: 5px;">Beekeeping & Pollinator Conservation</h4>
-                <!-- Image for program -->
-                <div>
-                <img src="images/card-image/beekeeper-working-bee-farm.jpg" 
-                alt="Program 1">
-                </div>
-                <!-- Program cards -->
-                <div class="cards">
-                    <div class="card"> 
-                        <div class="card-images">
-                            <img src="images/cards/—Pngtree—honey bee icon isolated on_5199207.png" alt="black and white bee">
-                        </div>
-                        <p>Repollination</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-images">
-                            <img src="images/cards/—Pngtree—clock vector cartoon_3668551.png" alt="black and white clock">
-                        </div>
-                        <p>2 - 4 hours volunteering per day</p>    
-                    </div>
-                    <div class="card">
-                        <div class="card-images">
-                            <img src="images/cards/—Pngtree—coin money icon_5278199.png" alt="black and white money">
-                        </div>
-                        <p>Program fees from $80</p>
-                    </div>
-                    
-                </div>
-                <!-- duration time and volunteer ages -->
-                <div >
-                    <div class="durations_volunteer">
-                        <div class="icon">
-                            <img src="images/icons/clock.png" alt="Green colour clock">
-                        </div>
-                        <div class="iconText">
-                            <p>Durations from 1 - 12 weeks</p>
-                        </div>
-                    </div>
-                    <div class="durations_volunteer">
-                        <div class="icon">
-                            <img src="images/icons/user-icon.png" alt="Green colour clock">
-                        </div>
-                        <div class="iconText">
-                            <p>Volunteers aged 16+ and families</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Program content -->
-                <div class="program-content">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Duration</th>
-                                <th>Program Fee</th>
-                                <th>Cost/Day</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>2 weeks</td>
-                                <td>£435</td>
-                                <td>£31/day</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div>
-                    <p class="description">Support bee conservation efforts by helping set up hives, educating farmers about pollinators, 
-                        and promoting organic farming to protect bees.</p>
-                </div>
-                <!-- Program buttons -->
-                <div class="buttons">
-                    <div class="button">View Project</div>
-                    <div class="button">Apply</div>
-                </div>
-            </div>
-<!--Program Card div 03 -->
-            <div class="program-card">
-                <!-- Country flag and name -->
-                <div class="countryCircle">
-                    <div class="circle-image">
-                        <img src="images/country-flags/india-flag-round-icon-128.png" alt="india-Flag">
-                    </div>
-                    <p class="countryText">India</p>
-                    <!-- Like Button -->
-                    <button class="heart-btn" onclick="toggleLike(this)"></button>
-                    
-                </div>
-                <h4 style="padding: 5px;">Childcare & Orphanage Support</h4>
-                <!-- Image for program -->
-                <div>
-                <img src="images/card-image/photorealistic-portrait-non-traditional-family-structure.jpg" 
-                alt="mother holding a child">
-                </div>
-                <!-- Program cards -->
-                <div class="cards">
-                    <div class="card"> 
-                        <div class="card-images">
-                            <img src="images/cards/—Pngtree—vector house icon_4013530.png" alt="black and white house">
-                        </div>
-                        <p>Hands of Hope</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-images">
-                            <img src="images/cards/—Pngtree—clock vector cartoon_3668551.png" alt="black and white clock">
-                        </div>
-                        <p>2 - 6 hours volunteering per day</p>    
-                    </div>
-                    <div class="card">
-                        <div class="card-images">
-                            <img src="images/cards/—Pngtree—coin money icon_5278199.png" alt="black and white money">
-                        </div>
-                        <p>Program fees from $200</p>
-                    </div>
-                    
-                </div>
-                <!-- duration time and volunteer ages -->
-                <div >
-                    <div class="durations_volunteer">
-                        <div class="icon">
-                            <img src="images/icons/clock.png" alt="Green colour clock">
-                        </div>
-                        <div class="iconText">
-                            <p>Durations from 1 - 20 weeks</p>
-                        </div>
-                    </div>
-                    <div class="durations_volunteer">
-                        <div class="icon">
-                            <img src="images/icons/user-icon.png" alt="Green colour clock">
-                        </div>
-                        <div class="iconText">
-                            <p>Volunteers aged 18+ and families</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Program content -->
-                <div class="program-content">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Duration</th>
-                                <th>Program Fee</th>
-                                <th>Cost/Day</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>2 weeks</td>
-                                <td>£435</td>
-                                <td>£31/day</td>
-                            </tr> 
-                        </tbody>
-                    </table>
-                </div>
-                <div>
-                    <p class="description">Assist in caring for children in orphanages or shelters by 
-                        providing education, emotional support, and recreational activities.</p>
-                </div>
-                <!-- Program buttons -->
-                <div class="buttons">
-                    <div class="button">View Project</div>
-                    <div class="button">Apply</div>
-                </div>
-            </div>
-<!--Program Card div 04 -->
-            <div class="program-card">
-                <!-- Country flag and name -->
-                <div class="countryCircle">
-                    <div class="circle-image">
-                        <img src="images/country-flags/uganda-flag-round-icon-128.png" alt="Uganda Flag">
-                    </div>
-                    <p class="countryText">Uganda</p>
-                    <!-- Like Button -->
-                    <button class="heart-btn" onclick="toggleLike(this)"></button>
-                    
-                </div>
-                <h4 style="padding: 5px;">Safe Drinking Water Initiative</h4>
-                <!-- Image for program -->
-                <div>
-                <img src="images/card-image/medium-shot-boy-drinking-water.jpg" 
-                alt="african kid drinking water">
-                </div>
-                <!-- Program cards -->
-                <div class="cards">
-                    <div class="card"> 
-                        <div class="card-images">
-                            <img src="images/cards/—Pngtree—water drop icon_4744471.png " alt="black and white water drop">
-                        </div>
-                        <p>Clean Water for everyone</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-images">
-                            <img src="images/cards/—Pngtree—clock vector cartoon_3668551.png" alt="black and white clock">
-                        </div>
-                        <p>3 - 5 hours volunteering per day</p>    
-                    </div>
-                    <div class="card">
-                        <div class="card-images">
-                            <img src="images/cards/—Pngtree—coin money icon_5278199.png" alt="black and white money">
-                        </div>
-                        <p>Program fees from $150</p>
-                    </div>
-                    
-                </div>
-                <!-- duration time and volunteer ages -->
-                <div >
-                    <div class="durations_volunteer">
-                        <div class="icon">
-                            <img src="images/icons/clock.png" alt="Green colour clock">
-                        </div>
-                        <div class="iconText">
-                            <p>Durations from 1 - 16 weeks</p>
-                        </div>
-                    </div>
-                    <div class="durations_volunteer">
-                        <div class="icon">
-                            <img src="images/icons/user-icon.png" alt="Green colour clock">
-                        </div>
-                        <div class="iconText">
-                            <p>Volunteers aged 16+ and families</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Program content -->
-                <div class="program-content">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Duration</th>
-                                <th>Program Fee</th>
-                                <th>Cost/Day</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>2 weeks</td>
-                                <td>£435</td>
-                                <td>£31/day</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div>
-                    <p class="description">Mangrove reforestation restores coastal forests, protecting shorelines, supporting wildlife,
-                        and absorbing carbon to fight climate change.</p>
-                </div>
-                <!-- Program buttons -->
-                <div class="buttons">
-                    <div class="button">View Project</div>
-                    <div class="button">Apply</div>
-                </div>
-            </div>
-        </div>
-
-        <!--Ratings -->
-<div>
-    <h4 style="text-align: center;">Recent Reviews</h4>
-</div>
-<div class="reviews-container">
-    <div class="ratings"><!--Left side ratings -->
-        <p style="font-size: 60px; color: rgb(14, 151, 14);">9.2/10</p>
-        <p>139 Reviews</p>
-        <p style="font-size: 12px; margin-top: 10px;">Reviews are verified unless labelled otherwise</p>
-    </div>
-    <div class="right-section">
-        <div class="reviews">
-            <div class="review-card">
-                <strong>10/10 Excellent</strong>
-                <p style="margin-top:12px ;">"We participated in a 10-day volunteering program, and it was an 
-                    incredibly rewarding experience. The organizers were well-prepared, ensuring everything 
-                    ran smoothly from start to finish. Whether it was childcare, reforestation, or community 
-                    work, every task felt meaningful, and we could see the impact of our efforts. The local 
-                    team was supportive and welcoming, making the experience even more enjoyable. Highly 
-                    recommend it to anyone looking for a hands-on way to give back while exploring a new culture!"</p>
-                <div class="review-author">Ms. Gally F.</div>
-                <div class="review-date">Jan 31, 2025</div>
-            </div>
-            <div class="review-card">
-                <strong>10/10 Excellent</strong>
-                <p style="margin-top: 12px;";">"We stayed for 5 days and had an amazing experience. The host, 
-                    Enrico, was incredibly accommodating and ensured we
-                     had everything we needed. The place was clean,
-                      well-maintained, and in a great location. Communication
-                       was smooth, and any requests we had were promptly handled.
-                        Highly recommended for anyone looking for a hassle-free and comfortable stay!"</p>
-                <div class="review-author">Mr Drake V P.</div>
-                <div class="review-date">Sep 05, 2024</div>
-            </div>
-        </div>
-    </div>
-</div>
-
-        <div class="feedback">
-            <h3>Send us your review</h3>
-            <textarea placeholder="Write your review here..."></textarea>
-            <div class="rating-emojis">
-                <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
-            </div>
-            <div class="buttons">
-                <div class="button">Submit Feedback</div>
-                <div class="button" style="background: grey;">Cancel</div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        function toggleLike(button) {
-            button.classList.toggle('liked');
-        }
-    </script>
-</body>
-</html>
-        </main>
-
-        <!-- Footer Section -->
-        <footer>
-            <div class="footer-content">
-                <p>Join the fight for a sustainable future 🌍</p>
-                <div class="editor-links">
-                    <a href="pageEditor_ST1.html">Page Editor: Student 1</a>
-                    <a href="pageEditor_ST2.html">Page Editor: Student 2</a>
-                    <a href="pageEditor_ST3.html">Page Editor: Student 3</a>
-                    <a href="pageEditor_ST4.html">Page Editor: Student 4</a>
-                </div>
-                <p>&copy; 2025 Climate Action. All rights reserved.</p>
-            </div>
-        </footer>
-    </div>
+    // Get modal elements
+    const modal = document.getElementById("modal");
+    const modalPhoto = document.getElementById("modal-photo");
+    const modalName = document.getElementById("modal-name");
+    const modalRole = document.getElementById("modal-role");
+    const modalDescription = document.getElementById("modal-description");
+    const closeBtn = document.querySelector(".close");
+    
+    // Add click event listeners for each "View Profile" button
+    document.querySelectorAll(".view-profile").forEach(button => {
+      button.addEventListener("click", function() {
+        const memberIndex = this.parentElement.getAttribute("data-member");
+        const member = teamMembers[memberIndex];
+        modalPhoto.src = member.photo;
+        modalName.textContent = member.name;
+        modalRole.textContent = member.role;
+        modalDescription.textContent = member.description;
+        modal.style.display = "block";
+      });
+    });
+    
+    // Close the modal when the close button is clicked or when clicking outside the modal content
+    closeBtn.addEventListener("click", function() {
+      modal.style.display = "none";
+    });
+    
+    window.addEventListener("click", function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
 </body>
 </html>
