@@ -15,6 +15,7 @@
             margin: 2rem 0;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             background: white;
+            
         }
 
         .climate-table th, .climate-table td {
@@ -39,6 +40,13 @@
         .country-flag {
             width: 30px;
             margin-right: 10px;
+        }
+
+        .country-name {
+        white-space: nowrap; /* Prevents text from wrapping */
+        display: flex; /* Aligns flag and text in a row */
+        align-items: center; /* Centers vertically */
+        gap: 10px; /* Adds space between flag and text */
         }
 
         .status-icon {
