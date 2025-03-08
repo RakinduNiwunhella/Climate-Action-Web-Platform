@@ -126,6 +126,7 @@ body {
 /* Right Sidebar */
 .right-sidebar {
     width: 25%;
+    
 }
 
 .right-sidebar img {
@@ -148,7 +149,7 @@ body {
 /* Contact Form */
 .contact-form input, .contact-form textarea {
     width: 100%;
-    max-width:300px
+    max-width:300px;
     padding: 20px;
     margin: 12px 0;
     border: 1px solid #ccc;
