@@ -16,6 +16,7 @@ body {
     object-fit: cover; /* Keeps aspect ratio */
 }
 
+
 /* Layout */
 .container {
     position: relative;
@@ -30,7 +31,7 @@ body {
 /* Sidebar (Profile Section) */
 .sidebar {
     width: 25%;
-    color: white;
+    color: rgb(8, 8, 8);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -88,7 +89,7 @@ body {
 }
 
 .info-box {
-    background: rgb(84, 183, 84);
+    background: rgba(239, 242, 239, 0.6);
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 10px;
