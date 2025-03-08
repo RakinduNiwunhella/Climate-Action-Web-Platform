@@ -102,7 +102,7 @@
         </div>
         <div><!--telephone no.-->
             <label for="tel-no.">Enter your Telephone Number:<span class="required">*</span></label>
-            <input type="tel" id="phone" name="phone" placeholder="Ex. 0712345678" size="10" required/>
+            <input type="tel" id="phone" name="phone" placeholder="Ex. 0712345678" size="10" required style="width: 100px;"/>
       </div>
       <div><!--address-->
             <label for="address">Enter your Address:<span class="required">*</span></label>
@@ -111,8 +111,8 @@
     </fieldset>
     <fieldset>
         <legend>Feedback Details</legend>
-        <div>
-              <label>Was this your first time visiting? </label>
+        <div><!--first time-->  
+            <label>Was this your first time visiting? </label>
               <br>
               <input type="radio" id="FirstTimeYes" name="FirstTime" value="Yes" required/>
               <label for="FirstTimeYes">Yes</label>
@@ -120,7 +120,7 @@
               <input type="radio" id="FirstTimeNo" name="FirstTime" value="No" required/>
               <label for="FirstTimeNo">No</label>
         </div>
-        <div>
+        <div><!--navigate-->
             <label>Was this website informative and easy to navigate through? </label>
             <br>
             <input type="radio" id="EasyYes" name="Easy" value="Yes" required/>
@@ -129,11 +129,12 @@
             <input type="radio" id="EasyNo" name="Easy" value="No" required/>
             <label for="FirstTimeNo">No</label>
         </div>
-        <div>
+        <div><!--improvements-->
             <label for="note">If "No", suggest any improvements for the future: </label>
+            <br>
             <textarea name="note" id="note" rows="2" cols="20">Add your message here... </textarea>
         </div>
-        <div>
+        <div><!--recommend-->
             <label>Would you recommend our services?</label>
             <br>
             <input type="radio" id="RecommendYes" name="Recommend" value="Yes" required/>
@@ -142,20 +143,22 @@
             <input type="radio" id="RecommendNo" name="Recommend" value="No" required/>
             <label for="FirstTimeNo">No</label>
         </div>
-        <div>
+        <div><!--updates-->
             <label for="updates">Would you like to receive updates about the website and any offers?</label>
             <select name="updates" id="updates">
                 <option value="Yes" style="text-align: center;">Yes - via Email</option>
                 <option value="No" style="text-align: center;">No</option>
             </select>
         </div>
-        <div>
+        <div><!--requests-->
             <label for="note">Do you have any additional questions or requests?</label>
+            <br>
             <textarea name="note" id="note" rows="5" cols="20">Add your message here... </textarea>
         </div>
     </fieldset>
     <fieldset>
     <legend>Rate Us</legend>
+    <!--rating-->
     <div class="rating">
         <span>&#128542;</span>
         <span>&#128577;</span>
@@ -164,10 +167,11 @@
         <span>&#128525;</span>
     </div>
     <div class="rating-container">
+        <!--satisfaction-->
         <p><strong>How satisfied are you with our services?</strong></p>
         <p>Choose from 1 to 10, with 1 being "Not satisfied at all!" and 10 being "Extremely satisfied!"</p>
         <div class="rating-options">
-            <!-- Generate radio buttons from 1 to 10 -->
+            <!--Generate radio buttons from 1 to 10-->
             <label>1 <input type="radio" name="satisfaction" value="1"></label>
             <label>2 <input type="radio" name="satisfaction" value="2"></label>
             <label>3 <input type="radio" name="satisfaction" value="3"></label>
@@ -177,10 +181,11 @@
             <label>7 <input type="radio" name="satisfaction" value="7"></label>
             <label>8 <input type="radio" name="satisfaction" value="8"></label>
             <label>9 <input type="radio" name="satisfaction" value="9"></label>
-            <label>10 <input type="radio" name="satisfaction" value="10"></label>
+            <label>10<input type="radio" name="satisfaction" value="10"></label>
         </div>
     </div>
     </fieldset>
+        <!--submit button-->
         <button type="Submit">Submit</button>
     </div>
     </main>
