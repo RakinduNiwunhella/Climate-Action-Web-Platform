@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Portfollio</title>
+</head>
+<body>
+	<h1>Hotel Reservation</h1>
+	<form>
+		<fieldset>
+			<legend>Personal Details:</legend>
+
+			<label for="firstname">First Name:</label><br>
+			<input type="text" name="firstname" id="firstname" size="20" placeholder="Enter your first name" required><br>
+
+			<label for="surname">Surname:</label><br>
+			<input type="text" name="surname" id="surname"
+			 size="20" placeholder="Enter your Surname" required>
+			 <br>
+
+			<label for="Email address">Email:</label><br>
+			<input type="email" name="email" id="email" size="20"><br>
+
+			<label for="password">Password:</label><br>
+			<input type="password" name="password" id="password" size="20">
+		</fieldset>
+
+		<fieldset>
+			<legend>Bookin Details:</legend>
+
+			<label for="checkinday">Checkin day:</label><br>
+			<input type="date" name="checkinday" id="checkinday" size="20" value="2023-02-14" required><br>
+
+			<label for="quantity">Number of days:</label><br>
+			<input type="number" name="quantity" id="quantity" size="20"><br>
+
+			<label for="singleroom">Single room:</label><br>
+			<input type="radio" name="delivery" id="singleroom"  size="20" checked><br>
+
+			<label for="doubleroom">Double room:</label><br>
+			<input type="radio" name="delivery" id="doubleroom"  size="20" checked><br>
+
+			<label for="kingroom">King room:</label><br>
+			<input type="radio" name="delivery" id="kingroom"  size="20" checked><br>
+
+			<label for ="breakfast">Breakfast:</label><br>
+			<select name="Breakfast" id="breakfast">
+				<option value="include" selected>Include</option>
+				<option value ="Not included">Not Included</option>
+			<label for="content">Special Requirements:</label>
+			<textarea id="content" name="content"  value="Please provide any special requirements" rows="5" cols="20">
+			</textarea><br>
+			</select>
+		</fieldset>
+		
+		<fieldset>
+			<input type="reset" name="button1" value="Reset"><br>
+			
+			<input type="send" name="button2" value="Send">	
+				
+		</fieldset>
+	</form>
+</body>
+</html>

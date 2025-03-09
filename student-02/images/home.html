@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Action Hub | Home</title>
+    <link rel="stylesheet" href="styleglobal.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+    <style>
+
+        /* Home Page Specific Styles */
+        .mission-section {
+            text-align: center;
+            padding: 3rem 0;
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), 
+                        url('images/climate-bg.jpg');
+            background-size: cover;
+            margin-bottom: 2rem;
+        }
+
+        .mission-section h1 {
+            color: var(--primary-green);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tile-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+
+        .content-tile {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .content-tile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .tile-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .tile-title {
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        /*  Add background video */
+        
+    </style>
+</head>
+<body>
+    <!-- Wrapper -->
+    <div class="wrapper">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <img src="images/logo.png" alt="Climate Action Logo" width="120">
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li class="active"><a href="home.html">Home</a></li>
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="table.html">Climate Data</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="team.html">Team</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <section class="mission-section">
+                <h1>Climate Action Now</h1>
+                <p>Join our global movement to combat climate change and support UN Sustainable Development Goal 13. 
+                   Together, we can create a sustainable future through education, innovation, and collective action.</p>
+            </section>
+
+            <div class="tile-container">
+                <!-- Content Tile 1 -->
+                <a href="content_ST1.html" class="content-tile">
+                    <img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=600" 
+                         alt="Renewable Energy" 
+                         class="tile-image">
+                    <h3 class="tile-title">Renewable Energy</h3>
+                    <p>Explore global initiatives for clean energy adoption.</p>
+                </a>
+
+                <!-- Content Tile 2 -->
+                <a href="content_ST2.html" class="content-tile">
+                    <img src="https://images.unsplash.com/photo-1589652717521-10c0d092dea9?auto=format&fit=crop&w=600" 
+                         alt="Carbon Emissions" 
+                         class="tile-image">
+                    <h3 class="tile-title">Carbon Emissions</h3>
+                    <p>Track CO2 reduction progress worldwide.</p>
+                </a>
+
+                <!-- Content Tile 3 -->
+                <a href="content_ST3.html" class="content-tile">
+                    <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=600" 
+                         alt="Forest Conservation" 
+                         class="tile-image">
+                    <h3 class="tile-title">Forest Conservation</h3>
+                    <p>Learn about reforestation projects.</p>
+                </a>
+
+                <!-- Content Tile 4 -->
+                <a href="content_ST4.html" class="content-tile">
+                    <img src="https://images.unsplash.com/photo-1508784411316-02b8cd4d3a3a?auto=format&fit=crop&w=600" 
+                         alt="Policy Advocacy" 
+                         class="tile-image">
+                    <h3 class="tile-title">Policy Advocacy</h3>
+                    <p>Discover how laws shape climate action.</p>
+                </a>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <p>Take action today for a greener tomorrow 🌱</p>
+                <div class="editor-links">
+                    <a href="pageEditor_ST1.html">Page Editor: Student 1</a>
+                    <a href="pageEditor_ST2.html">Page Editor: Student 2</a>
+                    <a href="pageEditor_ST3.html">Page Editor: Student 3</a>
+                    <a href="pageEditor_ST4.html">Page Editor: Student 4</a>
+                </div>
+                <p>&copy; 2025 Climate Action. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
