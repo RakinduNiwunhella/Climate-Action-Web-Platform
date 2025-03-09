@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Action Hub | Site Map</title>
+    <link rel="stylesheet" href="styleglobal.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <style>
+        .sitemap-container {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hierarchy-section {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .student-section {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: #e8f5e9;
+            border-radius: 8px;
+        }
+
+        .node {
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .node:hover {
+            filter: brightness(1.1);
+            transform: scale(1.05);
+        }
+
+        .student-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .student-list li {
+            padding: 1rem;
+            background: white;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Wrapper to center content -->
+    <div class="wrapper">
+        <!-- Header Section -->
+        <header>        
+            <!-- Logo -->
+            <div class="logo">
+                <img src="images/logo.png" alt="Climate Action Logo" width="120">
+            </div>
+
+            <!-- Navigation Bar -->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../../student-02/images/home.html">Home</a></li>
+                    <li><a href="../../student-01/volunteerPage/volunteer.html">Volunteer</a></li>
+                    <li><a href="../../student-02/images/table.html">Climate Data</a></li>
+                    <li><a href="../../student-04/UserProfile.html">User Profile</a></li>
+                    <li><a href="../../student-03/Feedback.html">Feedback</a></li>
+                    <li><a href="../../student-03/Team.html">Team</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="sitemap-container">
+            <h1>Website Structure Map</h1>
+            
+            <!-- Visual Hierarchy -->
+            <div class="hierarchy-section">
+                <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Splash Screen Node -->
+                    <g class="node" transform="translate(350,20)">
+                        <rect x="-60" y="-15" width="120" height="30" rx="5" fill="#2E7D32"/>
+                        <text fill="white" text-anchor="middle" dy=".3em">Splash Screen</text>
+                        <a href="../../student-01/splash.html" xlink:href="../../student-01/splash.html"></a>
+                    </g>
+
+                    <!-- Home Node -->
+                    <g class="node" transform="translate(350,100)">
+                        <rect x="-40" y="-15" width="80" height="30" rx="5" fill="#2196F3"/>
+                        <text fill="white" text-anchor="middle" dy=".3em">Home</text>
+                        <a href="../../student-02/images/home.html" xlink:href="../../student-02/images/home.html"></a>
+                    </g>
+
+                    <!-- Main Pages -->
+                    <g class="node" transform="translate(150,200)">
+                        <rect x="-60" y="-15" width="120" height="30" rx="5" fill="#4CAF50"/>
+                        <text fill="white" text-anchor="middle" dy=".3em">Volunteer</text>
+                        <a href="../../student-01/volunteerPage/volunteer.html" xlink:href="../../student-01/volunteerPage/volunteer.html"></a>
+                    </g>
+
+                    <g class="node" transform="translate(350,200)">
+                        <rect x="-70" y="-15" width="140" height="30" rx="5" fill="#4CAF50"/>
+                        <text fill="white" text-anchor="middle" dy=".3em">Climate Data</text>
+                        <a href="../../student-02/images/table.html" xlink:href="../../student-02/images/table.html"></a>
+                    </g>
+
+                    <g class="node" transform="translate(550,200)">
+                        <rect x="-60" y="-15" width="120" height="30" rx="5" fill="#4CAF50"/>
+                        <text fill="white" text-anchor="middle" dy=".3em">Profile</text>
+                        <a href="../../student-04/UserProfile.html" xlink:href="../../student-04/UserProfile.html"></a>
+                    </g>
+
+                    <!-- Connection Lines -->
+                    <path d="M350,50 L350,90" stroke="#2E7D32" stroke-width="2"/>
+                    <path d="M350,130 L150,185" stroke="#2E7D32" stroke-width="2"/>
+                    <path d="M350,130 L350,185" stroke="#2E7D32" stroke-width="2"/>
+                    <path d="M350,130 L550,185" stroke="#2E7D32" stroke-width="2"/>
+                </svg>
+            </div>
+
+            <!-- Student Assignments -->
+            <div class="student-section">
+                <h2>Developed By</h2>
+                <ul class="student-list">
+                    <li>
+                        <h3>Student 01</h3>
+                        <ul>
+                            <li>Splash Screen</li>
+                            <li>Volunteer Page</li>
+                            <li>Content Page 1</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Student 02</h3>
+                        <ul>
+                            <li>Home Page</li>
+                            <li>Climate Data</li>
+                            <li>Content Page 2</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Student 03</h3>
+                        <ul>
+                            <li>Feedback</li>
+                            <li>Team Page</li>
+                            <li>Content Page 3</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Student 04</h3>
+                        <ul>
+                            <li>User Profile</li>
+                            <li>Site Map</li>
+                            <li>Content Page 4</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <!-- Footer Section -->
+        <footer>
+            <div class="footer-content">
+                <p>Take action today for a greener tomorrow 🌱</p>
+                <div class="editor-links">
+                    <a href="../../student-01/PageEditor/pageEditor_ST0.html">Page Editor: Student 1</a>
+                    <a href="../../student-02/images/PageEditor/pageEditor_ST0.html">Page Editor: Student 2</a>
+                    <a href="../../student-03/PageEditor/pageEditor_ST0.html">Page Editor: Student 3</a>
+                    <a href="../../student-04/PageEditor/pageEditor_ST0.html">Page Editor: Student 4</a>
+                </div>
+                <div class="editor-links">
+                    <a href="../../student-04/SiteMap.html">Site Map</a>
+                </div>
+                <p>&copy; 2025 Climate Action. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
