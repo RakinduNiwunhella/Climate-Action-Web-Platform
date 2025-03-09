@@ -363,3 +363,49 @@ border-radius: 5px;
     padding: 20px 40px;
     font-size: 25px;
 }
+.why-volunteer-us-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.why-volunteer-us-container img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+}
+
+.why-volunteer-us-intro{
+    width: 65%;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 65%;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+}
+.why-volunteer-us-benifits{
+    font-size: 23px;
+    width: 65%;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 65%;
+    background: rgba(255, 255, 255, 0.6);
+
+}
+.why-volunteer-us-benifits dt {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.why-volunteer-us-benifits dd {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: #000000;
+
+}
