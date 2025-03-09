@@ -153,7 +153,7 @@ select {
 }
 
 .buttonB {
-    background: blue;
+    background: #1a45e2;
     color: white;
     padding: 10px;
     border-radius: 5px;
@@ -164,7 +164,7 @@ select {
     transition: background 0.3s ease;
 }
 .buttonB:hover {
-    background: #218838;
+    background: #1337b9;
 }
 .durations_volunteer{
     display: flex;
