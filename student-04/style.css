@@ -16,7 +16,17 @@ body {
     object-fit: cover; /* Keeps aspect ratio */
 }
 
-
+/* The image*/
+.image-container img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    transition:transform 0.5s ease-in-out;/*smooth zoom effect*/
+    background-size: cover;           /* Make the image cover the entire div */
+    background-position: center;      /* Center the image */
+    background-repeat: no-repeat;     /* Prevent the image from repeating */
+    
+}
 /* Layout */
 .container {
     position: relative;
@@ -172,14 +182,6 @@ body {
 .image-container {
     position: absolute;
     width: 100%;
-}
-/* The image*/
-.image-container img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition:transform 0.5s ease-in-out;/*smooth zoom effect*/
-    
 }
 
 .text-overlay {
