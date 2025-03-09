@@ -2,6 +2,9 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+main{
+    padding: 0;
+}
 html, body {
     margin: 0;
     padding: 0;
@@ -373,8 +376,8 @@ border-radius: 5px;
 }
 
 .why-volunteer-us-container img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
     position: absolute;
 }
 
