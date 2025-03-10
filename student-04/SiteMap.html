@@ -11,6 +11,7 @@
             padding: 2rem;
             max-width: 1200px;
             margin: 0 auto;
+            background-color: #94d3ad;
         }
 
         .hierarchy-section {
@@ -35,12 +36,22 @@
             gap: 1rem;
         }
 
+        .student rect {
+            transition: fill 0.3s ease/* Smooth transitions for color and transform */
+        }
+
+        .student:hover rect {
+            fill: #e20c0c; /* Example color change */
+            transform: scale(1.1); /* Slight scale-up effect without affecting layout */
+            padding:10;
+        }
+
         .node rect {
-            transition: fill 0.3s ease;/* Smooth transitions for color and transform */
+            transition: fill 0.3s ease/* Smooth transitions for color and transform */
         }
 
         .node:hover rect {
-            fill: #e20c0c; /* Example color change */
+            fill: #02501b; /* Example color change */
             transform: scale(1.1); /* Slight scale-up effect without affecting layout */
             padding:10;
         }
