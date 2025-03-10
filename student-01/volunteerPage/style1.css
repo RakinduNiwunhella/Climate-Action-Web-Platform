@@ -68,7 +68,7 @@ select {
     position: relative; /* For absolute positioning of the heart button */
 }
 
-.circle-image {
+.circle-image-container {
     width: 30px;  /* Really small size */
     height: 30px;
     border-radius: 50%;
@@ -79,11 +79,6 @@ select {
     align-items: center;
 }
 
-.circle-image img {
-    width: 30px;
-    height: 30px;
-    object-fit:contain;
-}
 
 .countryText {
     font-size: 14px; /* Slightly smaller text for balance */
@@ -391,7 +386,7 @@ border-radius: 5px;
 }
 
 .why-volunteer-us-container img {
-    width: auto;
+    width: 100%;
     height: 100%;
     position: absolute;
 }
