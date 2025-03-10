@@ -44,9 +44,11 @@
         .node:hover rect {
             fill: #02501b; /* Example color change */
             transform: scale(1.1); /* Slight scale-up effect without affecting layout */
-            padding: 0.5em;;
+            z-index:1;
         }
-
+        .node:hover rect {
+            fill: #02501b; /* Color change on hover */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow instead of scaling */
 
         .student-list li {
             padding: 1rem;
