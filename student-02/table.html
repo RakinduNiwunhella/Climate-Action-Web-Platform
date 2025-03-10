@@ -10,88 +10,92 @@
     <style>
         /* Table Page Specific Styles */
         .climate-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 2rem 0;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 100%;                               /* Full width of its container */
+            border-collapse: collapse;                 /* Remove spacing between cells */
+            margin: 2rem 0;                            /* Vertical margin around the table */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);   /* Subtle shadow for depth */
             background: white;
             
         }
 
+        /* Wrapper div that contains the table */
         .table-wrapper {
-            width: 80%; /* Adjust as needed (e.g., 70%, 90%) */
-            margin: 0 auto; /* Centers the table */
-            overflow-x: auto; /* Enables horizontal scrolling if needed */
+            width: 80%;       /* 80% width of the parent container */
+            margin: 0 auto;   /* Centers the wrapper horizontally */
+            overflow-x: auto; /* Adds horizontal scroll on small screens */
         }
 
         /* Ensure table fits within the wrapper */
         .climate-table {
             width: 100%; /* Fits within .table-wrapper */
-            max-width: 100%; /* Prevents table from overflowing */
+            max-width: 100%; /* Prevents table from exceeding the wrapper width */
         }
 
+        /* Styles for all table header and cell content */
         .climate-table th, .climate-table td {
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
+            padding: 1rem;                     /* Adds space inside cells */
+            text-align: left;                  /* Aligns text to the left */
+            border-bottom: 1px solid #ddd;    /* Light bottom border between rows */
         }
 
+        /* Styles for the table header row */
         .climate-table th {
-            background-color: var(--primary-green);
+            background-color: var(--primary-green); /* Green background color for CSS variable */
             color: white;
         }
 
+        /* Alternating row color for better readability */
         .climate-table tr:nth-child(even) {
-            background-color: #f9f9f9;
+            background-color: #f9f9f9;    /* Light grey background for even rows */
         }
 
+        /* Hover effect on table rows */
         .climate-table tr:hover {
-            background-color: #E8F5E9;
+            background-color: #E8F5E9;   /* Light green highlight on hover */
         }
 
+        /* Styles for the flag images inside table cells */
         .country-flag {
-            width: 30px;
-            margin-right: 10px;
+            width: 30px;             /* Width of the flag image */
+            margin-right: 10px;      /* Space between flag and text */
         }
 
+        /* Styles for the country name container */
         .country-name {
         white-space: nowrap; /* Prevents text from wrapping */
-        display: flex; /* Aligns flag and text in a row */
-        align-items: center; /* Centers vertically */
-        gap: 10px; /* Adds space between flag and text */
+        display: flex;       /* Aligns flag and text in a row */
+        align-items: center; /* Vertically centers flag and text */
+        gap: 10px;           /* Space between flag and country name */
         }
 
-        .status-icon {
-            color: var(--primary-green);
-            font-size: 1.2rem;
-        }
-
+        /* Styles for clickable links under initiatives */
         .initiative-link {
-            color: var(--primary-blue);
-            text-decoration: none;
+            color: var(--primary-blue);  /* Blue text color for CSS variable */
+            text-decoration: none;       /* Removes underline */
         }
 
+        /* Link hover effect */
         .initiative-link:hover {
-            text-decoration: underline;
+            text-decoration: underline;   /* Underline link on hover */
         }
 
-        /* Tooltip for header icons */
+        /* Tooltip styling for table headers with titles */
         th[title]:hover::after {
-            content: attr(title);
-            position: absolute;
-            background: #333;
-            color: white;
-            padding: 5px;
-            border-radius: 3px;
-            margin-top: 20px;
-            font-size: 0.8rem;
+            content: attr(title);  /* Displays the title attribute */
+            position: absolute;    /* Positions the tooltip relative to the page */
+            background: #333;    /* Dark background color */
+            color: white;        /* White text color */
+            padding: 5px;          /* Padding inside the tooltip */
+            border-radius: 3px;    /* Rounded corners */
+            margin-top: 20px;      /* Pushes tooltip below the header */
+            font-size: 0.8rem;     /* Smaller font size */
         }
 
-        /* Responsive table */
+        /* Responsive styles for screens below 768px wide */
         @media (max-width: 768px) {
             .climate-table {
-                display: block;
-                overflow-x: auto;
+                display: block;    /* Makes the table behave like a block element */
+                overflow-x: auto;  /* Allows horizontal scrolling on small screens */
             }
         }
     </style>
@@ -125,6 +129,8 @@
             <div class="table-wrapper">
                 <table class="climate-table">
                     <caption>(Data Source: UNEP, IEA, and National Reports)</caption>
+
+                    <!-- Columns headers-->
                     <thead>
                         <tr>
                             <th title="Country/Region">🌍 Country</th>
@@ -141,7 +147,9 @@
                         </tr>
                     </thead>
 
+                <!-- Rows for each country -->
                 <tbody>
+                    <!-- USA Data Row -->
                     <tr>
                         <td><img src="images/usN.svg" class="country-flag" alt="USA"> USA</td>
                         <td>14.5</td>
@@ -154,6 +162,7 @@
                         </td>
                     </tr>
 
+                    <!-- Germany Data Row -->
                     <tr>
                         <td><img src="images/de.svg" class="country-flag" alt="Germany"> Germany</td>
                         <td>7.8</td>
@@ -166,6 +175,7 @@
                         </td>
                     </tr>
 
+                    <!-- Brazil Data Row -->
                     <tr>
                         <td><img src="images/br.svg" class="country-flag" alt="Brazil"> Brazil</td>
                         <td>2.1</td>
@@ -178,6 +188,7 @@
                         </td>
                     </tr>
 
+                    <!-- India Data Row -->
                     <tr>
                         <td><img src="images/in.svg" class="country-flag" alt="India"> India</td>
                         <td>1.9</td>
@@ -190,6 +201,7 @@
                         </td>
                     </tr>
 
+                    <!-- China Data Row -->
                     <tr>
                         <td><img src="images/cn1.svg" class="country-flag" alt="China"> China</td>
                         <td>7.6</td>
@@ -202,6 +214,7 @@
                         </td>
                     </tr>
 
+                    <!-- South Africa Data Row -->
                     <tr>
                         <td><img src="images/za.svg" class="country-flag" alt="South Africa"> South Africa</td>
                         <td>6.7</td>
@@ -214,6 +227,7 @@
                         </td>
                     </tr>
 
+                    <!-- Japan Data Row -->
                     <tr>
                         <td><img src="images/jp.svg" class="country-flag" alt="Japan"> Japan</td>
                         <td>8.3</td>
@@ -226,6 +240,7 @@
                         </td>
                     </tr>
 
+                    <!-- UAE Data Row -->
                     <tr>
                         <td><img src="images/ae.svg" class="country-flag" alt="UAE"> UAE</td>
                         <td>18.9</td>
@@ -237,7 +252,6 @@
                             <a href="https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/environment-and-energy/the-uae-net-zero-2050-strategy" class="initiative-link">Expanding renewables, but high per capita emissions and oil/gas reliance challenge net-zero by 2050 pledge.</a>
                         </td>
                     </tr>
-
                 </tbody>
             </table>
         </main>
