@@ -73,8 +73,8 @@
                                        accessibility even more, thus far not implemented.A combination of design features contributes to increasing the 
                                        inclusiveness of user experience. </p>
                                 
-                                <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
-                                    <p><a href="validation_ST0.html#splashVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+                                <h3>Profile Page</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                                    <p><a href="../../student-04/profile.html">Profile Page</a></p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
             
                                 <h3>Link to the page</h3>
                                     <p><a href="splash.html">Include a link to the actual page you describe.</a></p>
@@ -83,17 +83,28 @@
                         <section>
                             <h2 id="site">Site-Map</h2>
                                 <h3>Technical Description</h3>
-                                    <p>Explain the HTML and CSS techniques used to implement this page. Justify the logic and purpose of the key tags and styling choices focusing on functionality and design without copying large code sections. Explain the purpose of key HTML tags and CSS properties. Specify key HTML tags and CSS properties used to create structure and styling.</p> 
+                                    <p>The SVG design proposes an interactive navigation nature-illustrated interface by representing buttons through
+                                       rectangles, labels through texts, and connection through paths. Each node is grouped using <b>g tag</b> and positioned 
+                                       using transform="'translate(x,y)'". Rectangles have rounded corners and come coated in various colors-green for
+                                       pages, blue for home-for differentiation needs. The text elements are centered inside the rectangles for clear
+                                       visibility. The nodes are wrapped in clickable links that are made interactive with <b>a xlink:href</b>. Connections
+                                       between related sections are visually made with <b>path</b>, therefore forming a structured navigation map. That 
+                                       ensures clear, functional, and user-friendly design. </p> 
             
                                 <h3>Accessibility</h3>
-                                    <p>Explain how you used to addressed accessibility in this particular page you implemented.</p>
+                                    <p>To enhance information accessibility in the SVG navigation, contrast of all text elements was taken into
+                                      consideration for user-friendly; this will assist users who have vision impairment-related disabilities in
+                                      reading. Semantic grouping using <b>g</b> tags for easier assistive technology interpretation was done. All links
+                                      were embedded inside <b>a </b> ;tags to allow keyboard navigation and compatibility with screen readers. Large 
+                                      clickable areas on the buttons are provided for users who have motor impairments. Plus, connections between
+                                      the different elements assist users in following through easily.   </p>
             
-                                <h3>Link to the validation page</h3> <!-- Update the path to link the Page Editor with the splash page -->
-                                    <p><a href="validation_ST0.html#volunteerVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+                                <h3>Site-Map</h3> <!-- Update the path to link the Page Editor with the splash page -->
+                                    <p><a href="../../student-04/sitemap.html">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
             
                                     
                                 <h3>Link to the page</h3>
-                                    <p><a href="volunteer.html">Include a link to the actual page you describe.</a></p>
+                                    <p><a href="../../student-04/sitemap.html">Site-Map</a></p>
                         </section>
             
                         <section>
@@ -108,18 +119,29 @@
                                     <p><a href="validation_ST0.html#contentVal">Include a link to the validation page</a>, use the marker to jump to the corresponding section of the validation page.</p> <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
             
                                     
-                                <h3>Link to the page</h3>
+                                <h3>Content Page</h3>
                                     <p><a href="content.html">Include a link to the actual page you describe.</a></p>
                         </section>
             
                         <section>
                             <h2 id="challenge"> Challenges and Lessons Learned</h2>
-                                <p>Detail any challenges encountered during the implementation process and explain how they were resolved. Reflect on the lessons learned from overcoming these challenges.</p> 
+                                <p>In the process of implementation, one of the major challenges was in getting the clickable areas in the SVG to work as intended.
+                                   Several of the links within the <b>a</b> tags were, at one time, not clickable because the anchor elements were not properly nested
+                                   around the SVG shapes. The particular issue shall be solved by wrapping each of the interactive elements, such as buttons and links,
+                                   inside the appropriate <b>a</b> tags. Ensuring that both the design and layout of the SVG were in line with the HTML structure presented
+                                   another challenge, especially the sidebar and content sections. It could lead to a situation where there would be a difference in 
+                                   the ((visual appearance of the two)). This is, however, being dealt with by using the same colors for links and working on making 
+                                   the layout adaptive for other resolutions. In brief, I gained the knowledge to structurally prepare the SVG elements correctly for
+                                   interactivity, while keeping a common design between HTML and SVG to have a smooth experience for the user. </p> 
                         </section>
             
                         <section>
                             <h2 id="compliance"> Compliance</h2>
-                                <p>Discuss how the pages you have created are compliant with Janet regulations governing web page publication. This includes demonstrating your understanding and application of these regulations. Be realistic and truthful.</p> 
+                                <p>The webpages I created adhere to Janet regulations by ensuring that everything was done to ensure accessibility, data privacy,
+                                   and content accuracy. These include: description of images with alt text, content easy to read, and the user data being protected
+                                   through simple contact forms. Through some original, accurate, and up-to-date content, basic values and principles, such as
+                                   inclusion and non-discrimination, are undoubtedly promoted. With just these few principles set, further maintenance will be
+                                   required to assure full compliance, particularly regarding accessibility audits and data security measures. </p> 
             
                                 
                         </section>
