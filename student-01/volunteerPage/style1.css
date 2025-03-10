@@ -147,10 +147,25 @@ select {
     transition: background 0.3s ease;
 }
 
+
 .button:hover {
     background: #218838;
 }
 
+.buttonB {
+    background: #1a45e2;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.buttonB:hover {
+    background: #1337b9;
+}
 .durations_volunteer{
     display: flex;
     align-items: center;
