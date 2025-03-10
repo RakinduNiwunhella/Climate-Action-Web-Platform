@@ -154,8 +154,8 @@
                         <div class="program-card">
                             <!-- Country flag and name -->
                             <div class="countryCircle">
-                                <div class="circle-image">
-                                    <img src="images/country-flags/indonesia-flag-round-icon-128.png" alt="Indonesia Flag">
+                                <div class="circle-image-container">
+                                    <img src="images/country-flags/indonesia-flag-round-icon-128.png" alt="Indonesia Flag" class="circle-image">
                                 </div>
                                 <p class="countryText">Indonesia</p>
                                 <!-- Like Button -->
@@ -242,8 +242,8 @@
                         <div class="program-card">
                             <!-- Country flag and name -->
                             <div class="countryCircle">
-                                <div class="circle-image">
-                                    <img  src="images/country-flags/mexico-flag-round-icon-64.png" alt="Indonesia Flag">
+                                <div class="circle-image-container">
+                                    <img style="width: 100%; height: 100%; object-fit: contain;" src="images/country-flags/mexico-flag-round-icon-64.png" alt="Indonesia Flag" class="circle-image">
                                 </div>
                                 <p class="countryText">Mexico</p>
                                 <!-- Like Button -->
@@ -330,8 +330,8 @@
                         <div class="program-card">
                             <!-- Country flag and name -->
                             <div class="countryCircle">
-                                <div class="circle-image">
-                                    <img src="images/country-flags/india-flag-round-icon-128.png" alt="india-Flag">
+                                <div class="circle-image-container">
+                                    <img style="width: 100%; height: 100%; object-fit: contain;" src="images/country-flags/india-flag-round-icon-128.png" alt="india-Flag" class="circle-image">
                                 </div>
                                 <p class="countryText">India</p>
                                 <!-- Like Button -->
@@ -418,8 +418,8 @@
                         <div class="program-card">
                             <!-- Country flag and name -->
                             <div class="countryCircle">
-                                <div class="circle-image">
-                                    <img src="images/country-flags/uganda-flag-round-icon-128.png" alt="Uganda Flag">
+                                <div class="circle-image-container">
+                                    <img style="width: 100%; height: 100%; object-fit: contain;" src="images/country-flags/uganda-flag-round-icon-128.png" alt="Uganda Flag" class="circle-image">
                                 </div>
                                 <p class="countryText">Uganda</p>
                                 <!-- Like Button -->
@@ -512,6 +512,8 @@
                 <div class="ratings"><!--Left side ratings -->
                     <p style="font-size: 60px; color: rgb(14, 151, 14);">9.2/10</p>
                     <p>139 Reviews</p>
+                    <a style="margin: 0; padding: 0;" href="#view-all">View all</a>
+
                     <p style="font-size: 12px; margin-top: 10px;">Reviews are verified unless labelled otherwise</p>
                 </div>
                 <div class="right-section">
@@ -541,17 +543,19 @@
                     </div>
                 </div>
             </div>
-            
+                <div>
                     <div class="feedback">
                         <h3>Send us your review</h3>
-                        <textarea placeholder="Write your review here..."></textarea>
-                        <div class="rating-emojis">
-                            <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
-                        </div>
-                        <div class="buttons">
-                            <div class="button">Submit Feedback</div>
-                            <div class="button" style="background: grey;">Cancel</div>
-                        </div>
+                        <form>
+                            <textarea placeholder="Write your review here..."></textarea>
+                            <div class="rating-emojis">
+                                <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+                            </div>
+                            <div class="buttons">
+                                <button type="submit" class="button">Submit Feedback</button>
+                                <button type="reset" class="button" style="background: grey;">Cancel</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             
@@ -566,10 +570,10 @@
             <div class="footer-content">
                 <p>Take action today for a greener tomorrow 🌱</p>
                 <div class="editor-links">
-                    <a href="../../student-01/PageEditor/pageEditor_ST0.html">Page Editor: Student 1</a>
-                    <a href="../../student-02/images/PageEditor/pageEditor_ST0.html">Page Editor: Student 2</a>
-                    <a href="../../student-03/PageEditor/pageEditor_ST0.html">Page Editor: Student 3</a>
-                    <a href="../../student-04/PageEditor/pageEditor_ST0.html">Page Editor: Student 4</a>
+                    <a href="../../student-01/PageEditor/pageEditor_ST1.html">Page Editor: Student 1</a>
+                    <a href="../../student-02/PageEditor/pageEditor_ST2.html">Page Editor: Student 2</a>
+                    <a href="../../student-03/PageEditor/pageEditor_ST3.html">Page Editor: Student 3</a>
+                    <a href="../../student-04/PageEditor/pageEditor_ST4.html">Page Editor: Student 4</a>
                 </div>
                 <div class="editor-links">
                     <a href="../../student-04/SiteMap.html">Site Map</a>
