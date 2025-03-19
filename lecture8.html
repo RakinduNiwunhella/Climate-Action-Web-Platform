@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>
+            Javascript Lecture 8
+        </title>
+    </head>
+    <body>
+        <script>
+            //pop & push
+           let fruits = ["Apple","Banana","Mango"];
+
+           console.log(fruits.pop());
+
+           console.log(fruits);
+
+           console.log(fruits.push("Kiwi"));
+
+           let fruit = ["Apple","Banana","Mango"];
+            fruit.push("Orange");
+
+           //create a est function
+
+           function checkAge(age){
+             return age > 21;
+
+             let checkAge = function(age){
+                return age >21;
+             }
+           }
+
+           //function that finds that maximum value of two numbers
+           function getMax(n1 , n2){
+                if (n1 < n2 ){
+                    return n2;
+                }else{
+                    return n1;
+                }
+           }
+        </script>
+    </body>
+</html>
